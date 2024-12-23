@@ -1,0 +1,21 @@
+{
+    "zencoder.enableCodingAgent (beta)": true,
+    "zencoder.excludeFilesFromIndexing": [
+        "build/**",
+        "dist/**",
+        "out/**",
+        ".hg/**",
+        "tmp/**",
+        "temp/**",
+        "cache/**",
+        "venv/**",
+        ".venv/**",
+        "env/**",
+        "vendor/**",
+        "test_output/**",
+        "coverage/**",
+        "logs/**",
+        "assets/**"
+    ],
+    "zencoder.enableRepoIndexing": true
+}
