@@ -22,11 +22,18 @@ $config['models'] =  array(
     'images_model',
     'files_model',
     'sites_model',
-    'users_online_model'
+    'users_online_model',
+    'products_model',
+    'services_model',
+    'invoices_model',
+    'payments_model',
+    'subscriptions_model',
+    'clients_model'
 );
 
 $config['helpers'] =  array(
-'urlhelper'
+'urlhelper',
+'confighelper'
 );
         
 define('SITE_NAME', 'Kixua Demo');

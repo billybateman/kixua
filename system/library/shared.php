@@ -7,10 +7,71 @@ function downloadUrlToFile($url, $outFileName)
     return copy($url, $outFileName);
 }
 
+function replaceDefaultWithModelName($filePath, $modelName) {
+    $fileContents = file_get_contents($filePath);
+    $updatedContents = str_replace('default', $modelName, $fileContents);
+    return $updatedContents;
+}
+
+
+function extractMigrationTableName($string) {
+    $parts = explode('_', $string, 3);
+    return end($parts);
+}
+
 function redirect(string $url): void
 {
     header("Location: $url");
     exit();
+}
+
+function mkmap($dir){
+    //$ffs = scandir($dir);
+
+    $ffs = array_diff(scandir($dir), array('.git', '.DS_Store','.vscode'));
+                        
+    echo '<ul>';
+    foreach($ffs as $file){
+        if($file != '.' && $file!= '..' ){
+
+            $path=$dir.'/'.$file;
+             echo "<li><a href='".$path."'>$file</a></li>";           
+
+            if(is_dir($dir.'/'.$file)) mkmap($dir.'/'.$file);
+
+        }
+    }
+    echo '</ul>';
+}
+
+function formatSizeUnits($bytes)
+    {
+        if ($bytes >= 1073741824)
+        {
+            $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+        }
+        elseif ($bytes >= 1048576)
+        {
+            $bytes = number_format($bytes / 1048576, 2) . ' MB';
+        }
+        elseif ($bytes >= 1024)
+        {
+            $bytes = number_format($bytes / 1024, 2) . ' KB';
+        }
+        elseif ($bytes > 1)
+        {
+            $bytes = $bytes . ' bytes';
+        }
+        elseif ($bytes == 1)
+        {
+            $bytes = $bytes . ' byte';
+        }
+        else
+        {
+            $bytes = '0 bytes';
+        }
+
+        return $bytes;
 }
 
 function normalizeUrl($url)

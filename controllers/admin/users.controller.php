@@ -134,7 +134,7 @@ class UsersController extends BaseController
     {
         if ($this->registry->session->get('user')) {
             $user = $this->registry->session->get('user');
-            $userData = $id ? $this->registry->usersmodel->get_user($id) : $this->registry->usersmodel->get_user($user['users_id']);
+            $userData = $this->registry->usersmodel->get_user($id);
 
             if ($userData) {
                 $this->registry->template->data = $userData;

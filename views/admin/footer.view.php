@@ -121,22 +121,22 @@
 
 
         <!-- Bootstrap JS -->
-        <script src="/assets/admin/js/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Metismenu Js -->
-        <script src="/assets/admin/js/plugins/metismenujs/metismenujs.min.js"></script>
+        <script src="/assets/vendor/metismenujs/metismenujs.min.js"></script>
 
         <!-- Simplebar Js -->
-        <script src="/assets/admin/js/plugins/simplebar/simplebar.min.js"></script>
+        <script src="/assets/vendor/simplebar/simplebar.min.js"></script>
 
         <!-- Feather Js -->
-        <script src="/assets/admin/js/plugins/feather-icons/feather.min.js"></script>
+        <script src="/assets/vendor/feather-icons/feather.min.js"></script>
 
         <link href="/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" type="text/css"/>	
         <script src="/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
         
-        <script src="/assets/admin/js/plugins/toastr/toastr.min.js"></script>
-        <link href="/assets/admin/js/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+        <script src="/assets/vendor/toastr/js/toastr.min.js"></script>
+        <link href="/assets/vendor/toastr/css/toastr.min.css" rel="stylesheet" type="text/css"/>
 
         <script src="/assets/admin/js/pusher.min.js"></script>
 

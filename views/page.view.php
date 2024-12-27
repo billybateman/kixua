@@ -108,13 +108,13 @@
 <!-- Mainly scripts -->
 <script src="//assets/admin/js/jquery-3.1.1.min.js"></script>
 <script src="//assets/admin/js/bootstrap.min.js"></script>
-<script src="//assets/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="//assets/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="//assets/vendor/metisMenu/jquery.metisMenu.js"></script>
+<script src="//assets/vendor/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
 <script src="//assets/admin/js/inspinia.js"></script>
-<script src="//assets/admin/js/plugins/pace/pace.min.js"></script>
-<script src="//assets/admin/js/plugins/wow/wow.min.js"></script>
+<script src="//assets/vendor/pace/pace.min.js"></script>
+<script src="//assets/vendor/wow/wow.min.js"></script>
 
 
 <script>

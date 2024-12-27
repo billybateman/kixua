@@ -1,0 +1,113 @@
+Filename:20241224_234605_databaseChanges.php Query:CREATE TABLE databaseChanges  (
+    databaseChanges_id INT AUTO_INCREMENT PRIMARY KEY,
+    databaseChanges_created_date DATETIME NOT NULL,
+    databaseChanges_query TEXT NOT NULL
+); processed at 2024-12-25 00:02:48
+Filename:20241224_235119_users_activities.php Query:CREATE TABLE users_activities (
+    users_activities_id INT AUTO_INCREMENT PRIMARY KEY,
+    users_activities_users_id INT NOT NULL,
+    users_activities_url VARCHAR(255) NOT NULL,
+    users_activities_action VARCHAR(100) NOT NULL,
+    users_activities_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:02:48
+Filename:create_backups_table.sql Query:
+CREATE TABLE backups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:02:48
+Filename:migrations.sql Query:
+CREATE TABLE migrations (
+    migrations_id INT AUTO_INCREMENT PRIMARY KEY,
+    migrations_created_date DATETIME NOT NULL,
+    migrations_query TEXT NOT NULL
+); processed at 2024-12-25 00:02:48
+Filename:20241224_234605_databaseChanges.php Query:CREATE TABLE databaseChanges  (
+    databaseChanges_id INT AUTO_INCREMENT PRIMARY KEY,
+    databaseChanges_created_date DATETIME NOT NULL,
+    databaseChanges_query TEXT NOT NULL
+); processed at 2024-12-25 00:16:06
+Filename:20241224_235119_users_activities.php Query:CREATE TABLE users_activities (
+    users_activities_id INT AUTO_INCREMENT PRIMARY KEY,
+    users_activities_users_id INT NOT NULL,
+    users_activities_url VARCHAR(255) NOT NULL,
+    users_activities_action VARCHAR(100) NOT NULL,
+    users_activities_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:16:06
+Filename:create_backups_table.sql Query:
+CREATE TABLE backups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:16:06
+Filename:20241224_234605_databaseChanges.php Query:CREATE TABLE databaseChanges  (
+    databaseChanges_id INT AUTO_INCREMENT PRIMARY KEY,
+    databaseChanges_created_date DATETIME NOT NULL,
+    databaseChanges_query TEXT NOT NULL
+); processed at 2024-12-25 00:32:14
+Filename:20241224_235119_users_activities.php Query:CREATE TABLE users_activities (
+    users_activities_id INT AUTO_INCREMENT PRIMARY KEY,
+    users_activities_users_id INT NOT NULL,
+    users_activities_url VARCHAR(255) NOT NULL,
+    users_activities_action VARCHAR(100) NOT NULL,
+    users_activities_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:32:14
+Filename:create_backups_table.sql Query:
+CREATE TABLE backups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:32:14
+Filename:20241224_234605_databaseChanges.php Query:CREATE TABLE databaseChanges  (
+    databaseChanges_id INT AUTO_INCREMENT PRIMARY KEY,
+    databaseChanges_created_date DATETIME NOT NULL,
+    databaseChanges_query TEXT NOT NULL
+); processed at 2024-12-25 00:53:06
+Filename:20241224_235119_users_activities.php Query:CREATE TABLE users_activities (
+    users_activities_id INT AUTO_INCREMENT PRIMARY KEY,
+    users_activities_users_id INT NOT NULL,
+    users_activities_url VARCHAR(255) NOT NULL,
+    users_activities_action VARCHAR(100) NOT NULL,
+    users_activities_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:53:06
+Filename:20241225_005127_projects.php Query:CREATE TABLE projects (
+    projects_id INT AUTO_INCREMENT PRIMARY KEY,
+    projects_name VARCHAR(255) NOT NULL,
+    projects_details TEXT,
+    projects_status VARCHAR(50) NOT NULL,
+    projects_clients_id INT NOT NULL,
+    projects_timeline_date DATE NOT NULL,
+    projects_create_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:53:06
+Filename:20241225_005148_tasks.php Query:CREATE TABLE tasks (
+    tasks_id INT AUTO_INCREMENT PRIMARY KEY,
+    tasks_name VARCHAR(255) NOT NULL,
+    tasks_details TEXT,
+    tasks_status VARCHAR(50) NOT NULL,
+    tasks_projects_id INT NOT NULL,
+    tasks_timeline_date DATE NOT NULL,
+    tasks_create_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (tasks_projects_id) REFERENCES projects(projects_id) ON DELETE CASCADE
+); processed at 2024-12-25 00:53:06
+Filename:20241225_005216_tasks_team.php Query:CREATE TABLE tasks_team (
+    tasks_team_id INT AUTO_INCREMENT PRIMARY KEY,
+    tasks_team_tasks_id INT NOT NULL,
+    tasks_team_users_id INT NOT NULL,
+    FOREIGN KEY (tasks_team_tasks_id) REFERENCES tasks(tasks_id) ON DELETE CASCADE
+); processed at 2024-12-25 00:53:06
+Filename:20241225_005245_tasks_sub_tasks.php Query:CREATE TABLE tasks_sub_tasks (
+    tasks_sub_tasks_id INT AUTO_INCREMENT PRIMARY KEY,
+    tasks_sub_tasks_tasks_id INT NOT NULL,
+    tasks_sub_tasks_name VARCHAR(255) NOT NULL,
+    tasks_sub_tasks_details TEXT,
+    tasks_sub_tasks_status VARCHAR(50) NOT NULL,
+    tasks_sub_tasks_timeline_date DATE NOT NULL,
+    tasks_sub_tasks_create_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (tasks_sub_tasks_tasks_id) REFERENCES tasks(tasks_id) ON DELETE CASCADE
+); processed at 2024-12-25 00:53:06
+Filename:create_backups_table.sql Query:
+CREATE TABLE backups (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); processed at 2024-12-25 00:53:06

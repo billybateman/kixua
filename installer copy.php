@@ -244,7 +244,7 @@
         </script>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <div id="logo">
                 <h1 class="logo">CodifyMVC</h1>
                 <div class="CTA">
