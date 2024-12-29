@@ -2,93 +2,165 @@
 
 class Router
 {
-    private $registry;
-    private $path;
-    private $isAdmin;
-    private $controller;
-    private $route;
-    private $routes;
-    private $action;
-    private $arguments;
-    private static $instance;
+	private $registry, $path, $ismodule, $isadmin, $controller, $route, $routes, $action, $arguments;
+	static $instance;
 
-    public function __construct($registry)
-    {
-        $this->registry = $registry;
+	public function __construct($registry)
+	{
+			
+		$this->registry = $registry;
+                
+                if (file_exists(__APP_PATH.'/config/routes.php')){
+                    include(__APP_PATH.'/config/routes.php');
+                    $this->routes = $routes;
+                }
+        
+                
+		$route = (empty($_GET['request'])) ? '' : $_GET['request'];
+                $route = trim($route,'/');
+                $route = str_replace('index.php-', '', $route);
+                $route = str_replace('.html', '', $route);
+                //var_dump($route);
+                
+                if (array_key_exists($route, $this->routes)) {
+                         
+                    $split = explode('/',trim($this->routes[$route],'/'));  
+                    $this->route = explode('/', $this->routes[$route]);
+                    
+                } else {
+                    
+                    $split = explode('/',trim($route,'/'));
+                    $this->route = explode('/', $route);
+		}
+		//var_dump($split);
+                //exit;
+                $this->process($split);
+		
+		
+	}
+        
+        public function process($split){
+            switch($split[0]){
+			
+                        case 'admin':
+				$this->ismodule = false;
+                                $this->isadmin = true;    
+				/*** load arguments for action ***/
+                                $this->arguments = array();
+                                foreach ($this->route as $key => $val) 
+                                {
+                                        
+                                                
+                                                if ($key == 0 || $key == 1 || $key == 2)
+                                        {
+                                                switch($key){
+                                                        case 0:
+                                                            $this->controller = "admin";
+                                                                $this->action = "index";
+                                                        break;
+                                                        case 1:
+                                                                $this->controller = $val;
+                                                                $this->controller = !empty($split[1]) ? $split[1] : 'index';
+                                                        break;
+                                                        case 2:
+                                                                $this->action = $val;
+                                                                $this->action = !empty($split[2]) ? $split[2] : 'index';
+                                                        break;
+                                                }
+                                        }
+                                        else
+                                        {
+                                                //var_dump($key);
+                                                //var_dump($val);
+                                                $this->arguments[$key] = $val;
+                                        }
+                                }
 
-        if (file_exists(__APP_PATH . '/config/routes.php')) {
-            include(__APP_PATH . '/config/routes.php');
-            $this->routes = $routes;
+
+                               //$this->arguments = $arguments;
+		
+			
+			break;
+			default:
+				
+                                
+                                $this->ismodule = false;
+                                $this->isadmin = false;
+				/*** load arguments for action ***/
+                                $this->arguments = array();
+                                foreach ($this->route as $key => $val) 
+                                {
+                                        if ($key == 0 || $key == 1)
+                                        {
+
+                                        } else {
+                                         $this->arguments[$key] = $val;
+                                        }
+                                }
+
+                                $this->controller = !empty($split[0]) ? $split[0] : 'index';
+                                $this->action = !empty($split[1]) ? $split[1] : 'index';
+                                //$this->arguments = $arguments;
+		
+			break;
+		}
         }
 
-        $route = isset($_GET['request']) ? trim($_GET['request'], '/') : '';
-        $route = str_replace(['index.php-', '.html'], '', $route);
+	public function route()
+	{
+		require_once('BaseController.class.php');
+		if($this->ismodule){
+			
+			$file = __APP_PATH.'/modules/'.$this->controller.'/controllers/' . $this->controller . '.controller.php';
+			
+		} else {
+		
+			if($this->isadmin){
+                            $file = __APP_PATH.'/controllers/admin/' . $this->controller . '.controller.php';
+                        } else {
+                            $file = __APP_PATH.'/controllers/' . $this->controller . '.controller.php';
+                        }
+		
+		}
+                
+		if(is_readable($file))
+		{
+			include $file;
+			$class = $this->controller . 'Controller';
+		}
+		else
+		{
+			include __APP_PATH.'/controllers/error.controller.php';
+			$class = 'ErrorController';
+		}
+                
+                
+                
+                
+		$controller = new $class($this->registry);
 
-        if (array_key_exists($route, $this->routes)) {
-            $split = explode('/', trim($this->routes[$route], '/'));
-            $this->route = explode('/', $this->routes[$route]);
-        } else {
-            $split = explode('/', trim($route, '/'));
-            $this->route = explode('/', $route);
-        }
+		if (!empty($this->action))
+		//call_users_func_array(array($controller, $this->action), $this->arguments);
+			$action = $this->action;
+		else
+			$action = 'index';
+		
+                //var_dump($this->arguments);
+                //var_dump($controller);
+                //var_dump($action);
+                //exit;
+		//call_users_func_array(array($controller, $action), $this->arguments);
+		
 
-        $this->process($split);
-    }
-
-    public function process($split)
-    {
-        $arguments = [];
-        switch ($split[0]) {
-            case 'admin':
-                $this->isAdmin = true;
-                $this->setControllerAndAction($split, $arguments, 1, 2, 'admin', 'index');
-                break;
-            default:
-                $this->isAdmin = false;
-                $this->setControllerAndAction($split, $arguments, 0, 1, 'index', 'index');
-                break;
-        }
-        $this->arguments = $arguments;
-    }
-
-    private function setControllerAndAction($split, &$arguments, $controllerIndex, $actionIndex, $defaultController = '', $defaultAction = '')
-    {
-        foreach ($this->route as $key => $val) {
-            if ($key == $controllerIndex) {
-                $this->controller = !empty($split[$controllerIndex]) ? $split[$controllerIndex] : $defaultController;
-            } elseif ($key == $actionIndex) {
-                $this->action = !empty($split[$actionIndex]) ? $split[$actionIndex] : $defaultAction;
-            } else {
-                $arguments[$key] = $val;
-            }
-        }
-    }
-
-    public function route()
-    {
-        require_once('BaseController.class.php');
-        $file = $this->getControllerFilePath();
-    
-
-        if (is_readable($file)) {
-            include $file;
-            $class = $this->controller . 'Controller';
-        } else {
-            include __APP_PATH . '/controllers/error.controller.php';
-            $class = 'ErrorController';
-        }
-
-        $controller = new $class($this->registry);
-        $action = !empty($this->action) ? $this->action : 'index';
-        call_user_func_array([$controller, $action], $this->arguments);
-    }
-
-    private function getControllerFilePath()
-    {
-        if ($this->isAdmin) {
-            return __APP_PATH . '/controllers/admin/' . $this->controller . '.controller.php';
-        } else {
-            return __APP_PATH . '/controllers/' . $this->controller . '.controller.php';
-        }
-    }
+                // I have $this->arguments its an array of arguments
+                // I need to loop through them somehow to pass them to the $action method in the controller class.
+               
+                $args = "";
+                foreach($this->arguments as $key => $value){
+                    $args .= "'".$value."',";
+                }
+                $args = rtrim($args, ',');
+                
+                $controller->$action($args);
+	}
 }

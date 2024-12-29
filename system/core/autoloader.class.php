@@ -23,7 +23,7 @@ class AutoLoader
     /* throw error if the class cannot be found */
 
     public static function load() {
-        $_src = array(ROOT.'/system/core/', ROOT.'/system/helpers/', ROOT.'/system/library/', __APP_PATH . '/models', __APP_PATH . '/libraries');
+        $_src = array(ROOT.'/system/core/', ROOT.'/system/helpers/', ROOT.'/system/library/', __APP_PATH . '/models', __APP_PATH . '/libraries', __APP_PATH . '/helpers');
         $_ext = array('php', 'class.php', 'model.php', 'driver.php', 'helper.php', 'controller.php');
 
         $files = scanDir::scan($_src, $_ext, true);

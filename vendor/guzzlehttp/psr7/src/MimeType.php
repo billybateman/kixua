@@ -729,7 +729,7 @@ final class MimeType
         'pdb' => 'application/x-pilot',
         'pde' => 'text/x-processing',
         'pdf' => 'application/pdf',
-        'pem' => 'application/x-x509-user-cert',
+        'pem' => 'application/x-x509-users_cert',
         'pfa' => 'application/x-font-type1',
         'pfb' => 'application/x-font-type1',
         'pfm' => 'application/x-font-type1',

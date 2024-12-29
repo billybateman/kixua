@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="mt-3">Settings Index</h1>
+    <h4 class="mb-0">Settings Index</h1>
     <p class="lead">Welcome to the settings index page.</p>
 </div>
 <div class="content-body">

@@ -3,17 +3,6 @@
 class BillingController extends BaseController
 {
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->registry->products_model = products_model::getInstance();
-        $this->registry->services_model = services_model::getInstance();
-        $this->registry->invoices_model = invoices_model::getInstance();
-        $this->registry->payments_model = payments_model::getInstance();
-        $this->registry->clients_model = clients_model::getInstance();
-        $this->registry->users_activities = users_activities::getInstance();
-    }
-
     public function index(){
         // Handle the content management index view
         $this->registry->template->show('admin/billing/index.view.php');
@@ -25,6 +14,13 @@ class BillingController extends BaseController
         $start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
         $products = $this->registry->products_model->get_limit_data($per_page, $start);
         $this->registry->template->products = $products;
+
+        $action = 'browse';
+        if(isset($_REQUEST['action'])){
+            $action = $_REQUEST['action'];
+        }
+
+        $this->registry->template->action = $action;
         $this->registry->template->show('admin/billing/products.view.php');
     }
 
@@ -34,6 +30,7 @@ class BillingController extends BaseController
         $start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
         $services = $this->registry->services_model->get_limit_data($per_page, $start);
         $this->registry->template->services = $services;
+        $this->registry->template->action = 'browse';
         $this->registry->template->show('admin/billing/services.view.php');
     }
 
@@ -47,6 +44,7 @@ class BillingController extends BaseController
             (object)['column' => 'services_type', 'value' => 'subscription']);
             
         $this->registry->template->subscriptions = $subscriptions;
+        $this->registry->template->action = 'browse';
         $this->registry->template->show('admin/billing/subscriptions.view.php');
     }
 
@@ -66,6 +64,7 @@ class BillingController extends BaseController
         }
         
         // Set template variables
+        $this->registry->template->action = 'browse';
         $this->registry->template->clients = $clients;
         $this->registry->template->total_clients = $total_clients;
         $this->registry->template->per_page = $per_page;
@@ -81,6 +80,7 @@ class BillingController extends BaseController
         $start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
         $invoices = $this->registry->invoices_model->get_limit_data($per_page, $start);
         $this->registry->template->invoices = $invoices;
+        $this->registry->template->action = 'browse';
         $this->registry->template->show('admin/billing/invoices.view.php');
     }
 
@@ -90,6 +90,7 @@ class BillingController extends BaseController
         $start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
         $payments = $this->registry->payments_model->get_limit_data($per_page, $start);
         $this->registry->template->payments = $payments;
+        $this->registry->template->action = 'browse';
         $this->registry->template->show('admin/billing/payments.view.php');
     }
 
@@ -100,9 +101,10 @@ class BillingController extends BaseController
         $active_clients = count($this->registry->clients_model->get_active_clients());
         
         // Get recent activities
-        $recent_activities = $this->registry->users_activities->getActivitiesAfterTimestamp(
+        /*$recent_activities = $this->registry->users_activities->getActivitiesAfterTimestamp(
             date('Ymd_His', strtotime('-30 days')) . '_users_activities'
         );
+        */
         
         // Calculate revenue
         $month_start = date('Y-m-01 00:00:00');
@@ -112,9 +114,9 @@ class BillingController extends BaseController
         // Set template variables
         $this->registry->template->total_clients = $total_clients;
         $this->registry->template->active_clients = $active_clients;
-        $this->registry->template->recent_activities = $recent_activities;
+        //$this->registry->template->recent_activities = $recent_activities;
         $this->registry->template->monthly_revenue = $monthly_revenue;
-        
+        $this->registry->template->action = 'browse';
         $this->registry->template->show('admin/billing/reports.view.php');
     }
 
@@ -232,6 +234,220 @@ class BillingController extends BaseController
         ];
         
         return $results;
+    }
+
+
+    public function createClient($clientData) {
+        // Logic to create a client
+        $this->registry->template->action = 'create';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Process form submission logic here
+            $clientData = $_POST;
+            $this->registry->clients_model->create($clientData);
+            $this->clients();
+        } else {
+            // Display the create form or redirect to another page
+            $this->registry->template->show('admin/billing/clients.view.php');
+        }
+    }
+
+    public function updateClient($clientId) {
+        // Logic to update a client
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $clientData = $_POST;
+            $this->registry->clients_model->update($clientId, $clientData);
+            $this->clients();
+        } else {
+            $client = $this->registry->clients_model->get_by_id($clientId);
+            $this->registry->template->client = $client;
+            $this->registry->template->show('admin/billing/clients.view.php');
+        }
+    }
+
+    public function deleteClient($clientId) {
+        // Logic to delete a client
+        $client = $this->registry->clients_model->get_by_id($clientId);
+        if (!$client) {
+            return false;
+        }
+        $this->registry->clients_model->delete($clientId);
+    }
+
+    // Products
+    public function createProduct($productData) {
+        // Logic to create a product
+        $this->registry->template->action = 'create';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $productData = $_POST;
+            $this->registry->products_model->create($productData);
+            $this->products();
+        } else {
+            $this->registry->template->show('admin/billing/products.view.php');
+        }
+    }
+
+    public function updateProduct($productId, $productData) {
+        // Logic to update a product
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $productData = $_POST;
+            $this->registry->products_model->update($productId, $productData);
+            $this->products();
+        } else {
+            $product = $this->registry->products_model->get_by_id($productId);
+            $this->registry->template->product = $product;
+            $this->registry->template->show('admin/billing/products.view.php');
+        }
+    }
+
+    public function deleteProduct($productId) {
+        // Logic to delete a product
+        if (!$this->registry->products_model->get_by_id($productId)) {
+            return false;
+        }
+        $this->registry->products_model->delete($productId);
+    }
+
+    // Reports
+    public function createReport($reportData) {
+        // Logic to create a report
+        $this->registry->template->action = 'create';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $reportData = $_POST;
+            $this->registry->reports_model->create($reportData);
+            $this->reports();
+        } else {
+            $this->registry->template->show('admin/billing/reports.view.php');
+        }
+    }
+
+    public function updateReport($reportId, $reportData) {
+        // Logic to update a report
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $reportData = $_POST;
+            $this->registry->reports_model->update($reportId, $reportData);
+            $this->reports();
+        } else {
+            $report = $this->registry->reports_model->get_by_id($reportId);
+            $this->registry->template->report = $report;
+            $this->registry->template->show('admin/billing/reports.view.php');
+        }
+    }
+
+    public function deleteReport($reportId) {
+        // Logic to delete a report
+        if (!$this->registry->reports_model->get_by_id($reportId)) {
+            return false;
+        }
+        $this->registry->reports_model->delete($reportId);
+    }
+
+    // Services
+    public function createService($serviceData) {
+        // Logic to create a service
+        $this->registry->template->action = 'create';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $serviceData = $_POST;
+            $this->registry->services_model->create($serviceData);
+            $this->services();
+        } else {
+            $this->registry->template->show('admin/billing/services.view.php');
+        }
+    }
+
+    public function updateService($serviceId, $serviceData) {
+        // Logic to update a service
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $serviceData = $_POST;
+            $this->registry->services_model->update($serviceId, $serviceData);
+            $this->services();
+        } else {
+            $service = $this->registry->services_model->get_by_id($serviceId);
+            $this->registry->template->service = $service;
+            $this->registry->template->show('admin/billing/services.view.php');
+        }
+    }
+
+    public function deleteService($serviceId) {
+        // Logic to delete a service
+        if (!$this->registry->services_model->get_by_id($serviceId)) {
+            return false;
+        }
+        $this->registry->services_model->delete($serviceId);
+    }
+
+    // Subscriptions
+    public function createSubscription($subscriptionData) {
+        // Logic to create a subscription
+        $this->registry->template->action = 'create';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $subscriptionData = $_POST;
+            $this->registry->services_model->create($subscriptionData);
+            $this->subscriptions();
+        } else {
+            $this->registry->template->show('admin/billing/subscriptions.view.php');
+        }
+    }
+
+    public function updateSubscription($subscriptionId, $subscriptionData) {
+        // Logic to update a subscription
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $subscriptionData = $_POST;
+            $this->registry->services_model->update($subscriptionId, $subscriptionData);
+            $this->subscriptions();
+        } else {
+            $subscription = $this->registry->services_model->get_by_id($subscriptionId);
+            $this->registry->template->subscription = $subscription;
+            $this->registry->template->show('admin/billing/subscriptions.view.php');
+        }
+    }
+
+    public function deleteSubscription($subscriptionId) {
+        // Logic to delete a subscription
+        if (!$this->registry->services_model->get_by_id($subscriptionId)) {
+            return false;
+        }
+        $this->registry->subscriptions_model->delete($subscriptionId);
+    }
+
+    // Payments
+    public function createPayment($paymentData) {
+        // Logic to create a payment
+        $this->registry->template->action = 'create';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $paymentData = $_POST;
+            $this->registry->payments_model->create($paymentData);
+            $this->payments();
+        } else {
+            $this->registry->template->show('admin/billing/payments.view.php');
+        }
+    }
+
+    public function updatePayment($paymentId, $paymentData) {
+        // Logic to update a payment
+        $this->registry->template->action = 'update';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $paymentData = $_POST;
+            $this->registry->payments_model->update($paymentId, $paymentData);
+            $this->payments();
+        } else {
+            $payment = $this->registry->payments_model->get_by_id($paymentId);
+            $this->registry->template->payment = $payment;
+            $this->registry->template->show('admin/billing/payments.view.php');
+        }
+    }
+
+    public function deletePayment($paymentId) {
+        // Logic to delete a payment
+        if (!$this->registry->payments_model->get_by_id($paymentId)) {
+            return false;
+        }
+        $this->registry->payments_model->delete($paymentId);
     }
 }
 ?>

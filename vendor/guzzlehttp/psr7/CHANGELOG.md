@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated links in docs to their canonical versions
-- Replaced `call_user_func*` with native calls
+- Replaced `call_users_func*` with native calls
 
 ## 2.6.1 - 2023-08-27
 
@@ -423,7 +423,7 @@ Several other fixes and improvements.
 - Now properly parsing HTTP requests that contain proxy targets in
   `parse_request`.
 - functions.php is now conditionally required.
-- user-info is no longer dropped when resolving URIs.
+- users_info is no longer dropped when resolving URIs.
 
 
 ## [1.1.0] - 2015-06-24

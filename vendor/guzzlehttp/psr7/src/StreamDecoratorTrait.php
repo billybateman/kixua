@@ -50,7 +50,7 @@ trait StreamDecoratorTrait
             if (\PHP_VERSION_ID >= 70400) {
                 throw $e;
             }
-            trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_USER_ERROR);
+            trigger_error(sprintf('%s::__toString exception: %s', self::class, (string) $e), E_users_ERROR);
 
             return '';
         }

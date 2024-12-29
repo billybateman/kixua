@@ -402,7 +402,7 @@ $response = $client->send($request);
   send multiple requests in parallel.
 - `setUserAgent()` has been removed. Use a default request option instead. You
   could, for example, do something like:
-  `$client->setConfig('defaults/headers/User-Agent', 'Foo/Bar ' . $client::getDefaultUserAgent())`.
+  `$client->setConfig('defaults/headers/users_Agent', 'Foo/Bar ' . $client::getDefaultUserAgent())`.
 - `setSslVerification()` has been removed. Use default request options instead,
   like `$client->setConfig('defaults/verify', true)`.
 
@@ -722,7 +722,7 @@ PHP requests are now implemented through the `GuzzleHttp\Adapter\StreamAdapter`.
 
 ### Deprecations
 
-- You can now enable E_USER_DEPRECATED warnings to see if you are using any deprecated methods.:
+- You can now enable E_users_DEPRECATED warnings to see if you are using any deprecated methods.:
 
 ```php
 \Guzzle\Common\Version::$emitWarnings = true;

@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <div class="container-fluid">
-    <h1 class="mt-3">Scheduled Tasks/Jobs</h1>
+    <h4 class="mb-0">Scheduled Tasks/Jobs</h1>
     <p>Manage scheduled tasks and jobs here.</p>
     <?php if ($message): ?>
         <div class="alert alert-success"><?php echo htmlspecialchars($message); ?></div>

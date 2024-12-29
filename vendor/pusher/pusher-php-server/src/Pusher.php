@@ -227,14 +227,14 @@ class Pusher implements LoggerAwareInterface, PusherInterface
     /**
      * Ensure an user id is valid based on our spec.
      *
-     * @param string $user_id The user id to validate
+     * @param string $users_id The user id to validate
      *
-     * @throws PusherException If $user_id is invalid
+     * @throws PusherException If $users_id is invalid
      */
-    private function validate_user_id(string $user_id): void
+    private function validate_users_id(string $users_id): void
     {
-        if ($user_id === null || empty($user_id)) {
-            throw new PusherException('Invalid user id ' . $user_id);
+        if ($users_id === null || empty($users_id)) {
+            throw new PusherException('Invalid user id ' . $users_id);
         }
     }
 
@@ -466,7 +466,7 @@ class Pusher implements LoggerAwareInterface, PusherInterface
     /**
      * Send an event to a user.
      *
-     * @param string $user_id
+     * @param string $users_id
      * @param string $event
      * @param mixed $data Event data
      * @param bool $already_encoded [optional]
@@ -474,16 +474,16 @@ class Pusher implements LoggerAwareInterface, PusherInterface
      * @return object
      * @throws PusherException
      */
-    public function sendToUser(string $user_id, string $event, $data, bool $already_encoded = false): object
+    public function sendToUser(string $users_id, string $event, $data, bool $already_encoded = false): object
     {
-        $this->validate_user_id($user_id);
-        return $this->trigger(["#server-to-user-$user_id"], $event, $data, [], $already_encoded);
+        $this->validate_users_id($users_id);
+        return $this->trigger(["#server-to-users_$users_id"], $event, $data, [], $already_encoded);
     }
 
     /**
      * Asynchronously send an event to a user.
      *
-     * @param string $user_id
+     * @param string $users_id
      * @param string $event
      * @param mixed $data Event data
      * @param bool $already_encoded [optional]
@@ -491,10 +491,10 @@ class Pusher implements LoggerAwareInterface, PusherInterface
      * @return PromiseInterface
      * @throws PusherException
      */
-    public function sendToUserAsync(string $user_id, string $event, $data, bool $already_encoded = false): PromiseInterface
+    public function sendToUserAsync(string $users_id, string $event, $data, bool $already_encoded = false): PromiseInterface
     {
-        $this->validate_user_id($user_id);
-        return $this->triggerAsync(["#server-to-user-$user_id"], $event, $data, [], $already_encoded);
+        $this->validate_users_id($users_id);
+        return $this->triggerAsync(["#server-to-users_$users_id"], $event, $data, [], $already_encoded);
     }
 
 
@@ -591,34 +591,34 @@ class Pusher implements LoggerAwareInterface, PusherInterface
     /**
      * Terminates all connections established by the user with the given user id.
      *
-     * @param string $user_id
+     * @param string $users_id
      *
-     * @throws PusherException   If $user_id is invalid
+     * @throws PusherException   If $users_id is invalid
      * @throws ApiErrorException Throws ApiErrorException if the Channels HTTP API responds with an error
      *
      * @return object response body
      *
      */
-    public function terminateUserConnections(string $user_id): object
+    public function terminateUserConnections(string $users_id): object
     {
-        $this->validate_user_id($user_id);
-        return $this->post("/users/$user_id/terminate_connections", "{}");
+        $this->validate_users_id($users_id);
+        return $this->post("/users/$users_id/terminate_connections", "{}");
     }
 
     /**
      * Asynchronous request to terminates all connections established by the user with the given user id.
      *
-     * @param string $user_id
+     * @param string $users_id
      *
      * @throws PusherException   If $userId is invalid
      *
      * @return PromiseInterface promise wrapping response body
      *
      */
-    public function terminateUserConnectionsAsync(string $user_id): PromiseInterface
+    public function terminateUserConnectionsAsync(string $users_id): PromiseInterface
     {
-        $this->validate_user_id($user_id);
-        return $this->postAsync("/users/$user_id/terminate_connections", "{}");
+        $this->validate_users_id($users_id);
+        return $this->postAsync("/users/$users_id/terminate_connections", "{}");
     }
 
 
@@ -855,21 +855,21 @@ class Pusher implements LoggerAwareInterface, PusherInterface
      * Creates a user authentication signature.
      *
      * @param string $socket_id
-     * @param array $user_data
+     * @param array $users_data
      *
      * @return string Json encoded authentication string.
      * @throws PusherException Throws exception if $channel is invalid or above or $socket_id is invalid
      */
-    public function authenticateUser(string $socket_id, array $user_data): string
+    public function authenticateUser(string $socket_id, array $users_data): string
     {
         $this->validate_socket_id($socket_id);
-        $this->validate_user_data($user_data);
-        $serialized_user_data = json_encode($user_data, JSON_THROW_ON_ERROR);
-        $signature = hash_hmac('sha256', "$socket_id::user::$serialized_user_data", $this->settings['secret'], false);
+        $this->validate_users_data($users_data);
+        $serialized_users_data = json_encode($users_data, JSON_THROW_ON_ERROR);
+        $signature = hash_hmac('sha256', "$socket_id::user::$serialized_users_data", $this->settings['secret'], false);
         $auth = $this->settings['auth_key'] . ':' . $signature;
 
         return json_encode(
-            ['auth' => $auth, 'user_data' => $serialized_user_data],
+            ['auth' => $auth, 'users_data' => $serialized_users_data],
             JSON_THROW_ON_ERROR
         );
     }
@@ -921,25 +921,25 @@ class Pusher implements LoggerAwareInterface, PusherInterface
     /**
      * Convenience function for presence channel authorization.
      *
-     * Equivalent to authorizeChannel($channel, $socket_id, json_encode(['user_id' => $user_id, 'user_info' => $user_info], JSON_THROW_ON_ERROR))
+     * Equivalent to authorizeChannel($channel, $socket_id, json_encode(['users_id' => $users_id, 'users_info' => $users_info], JSON_THROW_ON_ERROR))
      *
      * @param string $channel
      * @param string $socket_id
-     * @param string $user_id
-     * @param mixed $user_info
+     * @param string $users_id
+     * @param mixed $users_info
      *
      * @return string
      * @throws PusherException Throws exception if $channel is invalid or above or $socket_id is invalid
      */
-    public function authorizePresenceChannel(string $channel, string $socket_id, string $user_id, $user_info = null): string
+    public function authorizePresenceChannel(string $channel, string $socket_id, string $users_id, $users_info = null): string
     {
-        $user_data = ['user_id' => $user_id];
-        if ($user_info) {
-            $user_data['user_info'] = $user_info;
+        $users_data = ['users_id' => $users_id];
+        if ($users_info) {
+            $users_data['users_info'] = $users_info;
         }
 
         try {
-            return $this->authorizeChannel($channel, $socket_id, json_encode($user_data, JSON_THROW_ON_ERROR));
+            return $this->authorizeChannel($channel, $socket_id, json_encode($users_data, JSON_THROW_ON_ERROR));
         } catch (\JsonException $e) {
             throw new PusherException('Data encoding error.');
         }
@@ -965,17 +965,17 @@ class Pusher implements LoggerAwareInterface, PusherInterface
     /**
      * @deprecated in favour of authorizePresenceChannel
      */
-    public function presenceAuth(string $channel, string $socket_id, string $user_id, $user_info = null): string
+    public function presenceAuth(string $channel, string $socket_id, string $users_id, $users_info = null): string
     {
-        return $this->authorizePresenceChannel($channel, $socket_id, $user_id, $user_info);
+        return $this->authorizePresenceChannel($channel, $socket_id, $users_id, $users_info);
     }
 
     /**
      * @deprecated in favour of authorizePresenceChannel
      */
-    public function presence_auth(string $channel, string $socket_id, string $user_id, $user_info = null): string
+    public function presence_auth(string $channel, string $socket_id, string $users_id, $users_info = null): string
     {
-        return $this->authorizePresenceChannel($channel, $socket_id, $user_id, $user_info);
+        return $this->authorizePresenceChannel($channel, $socket_id, $users_id, $users_info);
     }
 
     /**
@@ -1199,14 +1199,14 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         return $result;
     }
 
-    private function validate_user_data(array $user_data): void
+    private function validate_users_data(array $users_data): void
     {
-        if (is_null($user_data)) {
-            throw new PusherException('user_data is null');
+        if (is_null($users_data)) {
+            throw new PusherException('users_data is null');
         }
-        if (!array_key_exists('id', $user_data)) {
-            throw new PusherException('user_data has no id field');
+        if (!array_key_exists('id', $users_data)) {
+            throw new PusherException('users_data has no id field');
         }
-        $this->validate_user_id($user_data['id']);
+        $this->validate_users_id($users_data['id']);
     }
 }

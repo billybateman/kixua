@@ -29,7 +29,11 @@ class MigrationsModel
     public function browse(){
         $sql = "SELECT * FROM migrations ORDER BY migrations_created_date DESC";
         $this->db->prepare($sql);
-        return $this->db->query()->fetchAll();
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     function create($data){

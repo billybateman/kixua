@@ -1,6 +1,7 @@
 <div class="container-fluid">
-    <h1 class="mt-3">Migrations</h1>
+    <h4 class="mb-0">Migrations</h1>
     <a href="/admin/system/migrations/?action=create" class="btn btn-primary mb-3 content-loader">Create New Migration</a>
+    <a href="/admin/system/migrations/?action=createModels" class="btn btn-primary mb-3 content-loader">Create Models</a>
     <a href="javascript:void(0);" onclick="return runMigrations();" class="btn btn-primary mb-3">Run Migrations</a>
     <script>
 

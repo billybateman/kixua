@@ -70,7 +70,7 @@ class YouTubeStreamer
         $ch = curl_init();
 
         $headers = array();
-        $headers[] = 'User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0';
+        $headers[] = 'users_Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0';
 
         if (isset($_SERVER['HTTP_RANGE'])) {
             $headers[] = 'Range: ' . $_SERVER['HTTP_RANGE'];

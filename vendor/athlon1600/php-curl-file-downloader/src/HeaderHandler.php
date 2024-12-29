@@ -48,7 +48,7 @@ class HeaderHandler
     protected function sendHeaders()
     {
         if (is_callable($this->callback)) {
-            call_user_func($this->callback, $this);
+            call_users_func($this->callback, $this);
         }
     }
 

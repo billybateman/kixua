@@ -13,13 +13,20 @@ define('ROOT', $root);
 
 require_once(ROOT. '/system/core/core.php');
 
+
 $registry = new registry();
 $registry->config = $config;
 $registry->template = new template();
 
+
+
 require_once(ROOT. '/system/config/init.php');
 
+
+
+
 $router = new router($registry);
+
 $router->route();
 
 ?>

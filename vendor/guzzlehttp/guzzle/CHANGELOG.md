@@ -39,7 +39,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 ### Changed
 
 - Updated links in docs to their canonical versions
-- Replaced `call_user_func*` with native calls
+- Replaced `call_users_func*` with native calls
 
 
 ## 7.8.0 - 2023-08-27
@@ -1071,7 +1071,7 @@ interfaces.
 * Fixing BC break: Added back the MonologLogAdapter implementation rather than extending from PsrLog so that older
   Symfony users can still use the old version of Monolog.
 * Fixing BC break: Added the implementation back in for `Guzzle\Http\Message\AbstractMessage::getTokenizedHeader()`.
-  Now triggering an E_USER_DEPRECATED warning when used. Use `$message->getHeader()->parseParams()`.
+  Now triggering an E_users_DEPRECATED warning when used. Use `$message->getHeader()->parseParams()`.
 * Several performance improvements to `Guzzle\Common\Collection`
 * Added an `$options` argument to the end of the following methods of `Guzzle\Http\ClientInterface`:
   createRequest, head, delete, put, patch, post, options, prepareRequest
@@ -1094,7 +1094,7 @@ interfaces.
 * Removed `Guzzle\Http\Message\RequestInterface::setIsRedirect`
 * Removed `Guzzle\Http\Message\RequestInterface::isRedirect`
 * Made `Guzzle\Http\Client::expandTemplate` and `getUriTemplate` protected methods.
-* You can now enable E_USER_DEPRECATED warnings to see if you are using a deprecated method by setting
+* You can now enable E_users_DEPRECATED warnings to see if you are using a deprecated method by setting
   `Guzzle\Common\Version::$emitWarnings` to true.
 * Marked `Guzzle\Http\Message\Request::isResponseBodyRepeatable()` as deprecated. Use
       `$request->getResponseBody()->isRepeatable()` instead.
@@ -1225,7 +1225,7 @@ interfaces.
 * Bug fix: URLs are now resolved correctly based on https://datatracker.ietf.org/doc/html/rfc3986#section-5.2. #289
 * Bug fix: Absolute URLs with a path in a service description will now properly override the base URL. #289
 * Bug fix: Parsing a query string with a single PHP array value will now result in an array. #263
-* Bug fix: Better normalization of the User-Agent header to prevent duplicate headers. #264.
+* Bug fix: Better normalization of the users_Agent header to prevent duplicate headers. #264.
 * Bug fix: Added `number` type to service descriptions.
 * Bug fix: empty parameters are removed from an OAuth signature
 * Bug fix: Revalidating a cache entry prefers the Last-Modified over the Date header
@@ -1311,7 +1311,7 @@ interfaces.
 * Fixed an issue where cURL would not automatically decompress responses when the Accept-Encoding header was sent
 * CURLOPT_SSL_VERIFYHOST is never set to 1 because it is deprecated (see 5e0ff2ef20f839e19d1eeb298f90ba3598784444)
 * Fixed a bug where redirect responses were not chained correctly using getPreviousResponse()
-* Setting default headers on a client after setting the user-agent will not erase the user-agent setting
+* Setting default headers on a client after setting the users_agent will not erase the users_agent setting
 
 ## 3.1.1 - 2013-01-20
 
@@ -1472,7 +1472,7 @@ interfaces.
 * Added an AbstractEntityBodyDecorator and a ReadLimitEntityBody decorator to transfer only a subset of a decorated stream
 * Stream and EntityBody objects will now return the file position to the previous position after a read required operation (e.g. getContentMd5())
 * Added additional response status codes
-* Removed SSL information from the default User-Agent header
+* Removed SSL information from the default users_Agent header
 * DELETE requests can now send an entity body
 * Added an EventDispatcher to the ExponentialBackoffPlugin and added an ExponentialBackoffLogger to log backoff retries
 * Added the ability of the MockPlugin to consume mocked request bodies
@@ -1575,7 +1575,7 @@ interfaces.
 * Bug: Fixing magic method command calls on clients
 * Bug: Email constraint only validates strings
 * Bug: Aggregate POST fields when POST files are present in curl handle
-* Bug: Fixing default User-Agent header
+* Bug: Fixing default users_Agent header
 * Bug: Only appending or prepending parameters in commands if they are specified
 * Bug: Not requiring response reason phrases or status codes to match a predefined list of codes
 * Allowing the use of dot notation for class namespaces when using instance_of constraint
@@ -1631,7 +1631,7 @@ interfaces.
 * ServiceDescription and ServiceBuilder are now cacheable using similar configs
 * Changing the format of XML and JSON service builder configs.  Backwards compatible.
 * Cleaned up Cookie parsing
-* Trimming the default Guzzle User-Agent header
+* Trimming the default Guzzle users_Agent header
 * Adding a setOnComplete() method to Commands that is called when a command completes
 * Keeping track of requests that were mocked in the MockPlugin
 * Fixed a caching bug in the CacheAdapterFactory

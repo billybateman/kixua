@@ -676,7 +676,7 @@ abstract class ParagonIE_Sodium_Core_BLAKE2b extends ParagonIE_Sodium_Core_Util
         $arr = $a->toArray();
         $c = $a->count();
         array_unshift($arr, str_repeat('C', $c));
-        return (string) (call_user_func_array('pack', $arr));
+        return (string) (call_users_func_array('pack', $arr));
     }
 
     /**

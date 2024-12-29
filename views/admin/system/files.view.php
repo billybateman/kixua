@@ -109,10 +109,7 @@ $rootItems = listFilesAndFolders($filePath);
                             
                             <div class="mt-0">
                                 <h6 class="text-uppercase mt-1 font-size-13">My Drive</h6>
-                                <?php 
-                                    $tree = new foldertree( $filePath );
-                                    echo $tree->create_tree();
-                                 ?>
+                               
                                  <div id="foldertree"> </div>
                                 <div class="tasks-list mt-1">
                                     <div>
@@ -718,10 +715,6 @@ $rootItems = listFilesAndFolders($filePath);
 </div> <!-- container-fluid -->
 
 <!-- dropzone js -->
-	
-<link rel="stylesheet" href="/assets/vendor/foldertree/foldertree.css" type="text/css" >
-<script src="/assets/vendor/foldertree/foldertree.js"></script>
-
 
 <script src="/assets/admin/assets/js/pages/remove.init.js"></script>
 

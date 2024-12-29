@@ -28,7 +28,11 @@ class clients_model
     public function get_all()
     {
         $query = "SELECT * FROM {$this->table} ORDER BY clients_created_at DESC";
-        return $this->db->query($query)->fetch_all(MYSQLI_ASSOC);
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     public function get_by_id($id)
@@ -47,7 +51,11 @@ class clients_model
         }
 
         $query .= " ORDER BY clients_created_at DESC LIMIT {$start}, {$limit}";
-        return $this->db->query($query)->fetch_all(MYSQLI_ASSOC);
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     public function create($data)
@@ -91,7 +99,12 @@ class clients_model
     public function count_all()
     {
         $query = "SELECT COUNT(*) as total FROM {$this->table}";
-        $result = $this->db->query($query)->fetch_assoc();
+        $this->db->query();
+
+        $result = $this->db->fetch('array');
+        if($result === false) {
+            return 0;
+        }
         return $result['total'];
     }
 
@@ -105,7 +118,11 @@ class clients_model
     public function get_active_clients()
     {
         $query = "SELECT * FROM {$this->table} WHERE clients_status = 'active' ORDER BY clients_name ASC";
-        return $this->db->query($query)->fetch_all(MYSQLI_ASSOC);
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     public function search($term)
@@ -116,6 +133,10 @@ class clients_model
                  OR clients_email LIKE '%{$term}%'
                  OR clients_company LIKE '%{$term}%'
                  ORDER BY clients_name ASC";
-        return $this->db->query($query)->fetch_all(MYSQLI_ASSOC);
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 }

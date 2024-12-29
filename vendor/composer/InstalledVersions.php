@@ -60,7 +60,7 @@ class InstalledVersions
             return $packages[0];
         }
 
-        return array_keys(array_flip(\call_user_func_array('array_merge', $packages)));
+        return array_keys(array_flip(\call_users_func_array('array_merge', $packages)));
     }
 
     /**
@@ -261,7 +261,7 @@ class InstalledVersions
      */
     public static function getRawData()
     {
-        @trigger_error('getRawData only returns the first dataset loaded, which may not be what you expect. Use getAllRawData() instead which returns all datasets for all autoloaders present in the process.', E_USER_DEPRECATED);
+        @trigger_error('getRawData only returns the first dataset loaded, which may not be what you expect. Use getAllRawData() instead which returns all datasets for all autoloaders present in the process.', E_users_DEPRECATED);
 
         if (null === self::$installed) {
             // only require the installed.php file if this file is loaded from its dumped location,

@@ -19,10 +19,10 @@ pre[class*="language-"].line-numbers > code {
 	letter-spacing: -1px;
 	border-right: 1px solid #999;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	-webkit-users_select: none;
+	-moz-users_select: none;
+	-ms-users_select: none;
+	users_select: none;
 
 }
 

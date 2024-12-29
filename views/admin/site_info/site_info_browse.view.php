@@ -1,5 +1,5 @@
 
-        <h2>Sites</h2>
+        <h4 class="mb-0">Sites</h2>
             <div class="col-md-4">
                 <a href="/admin/site_info/create" title="Create" class="btn btn-primary">Create</a>
             </div>

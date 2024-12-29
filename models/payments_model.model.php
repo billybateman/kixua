@@ -32,7 +32,11 @@ class payments_model
         }
         $sql = "SELECT * FROM $this->table $where LIMIT $start, $per_page ORDER BY $this->table_id DESC";
         $this->db->prepare($sql);
-        return $this->db->query()->fetchAll();
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     function create($data){
@@ -54,6 +58,20 @@ class payments_model
     function delete($id){
        $this->db->where($this->table_id, $id);
         $this->db->delete($this->table);
+    }
+
+    /**
+     * Get all payments after a specific date
+     * @param string $date Date in MySQL format (YYYY-MM-DD HH:MM:SS)
+     * @return array Array of payments
+     */
+    public function get_payments_after_date($date) {
+        $date = $this->db->escape($date);
+        $sql = "SELECT * FROM {$this->table} WHERE payments_payment_date >= '$date' ORDER BY payments_payment_date ASC";
+        $this->db->prepare($sql);
+        $this->db->query();
+        
+        return $this->db->fetchAll('array');
     }
 }
 ?>

@@ -69,6 +69,7 @@ class MySQLDriver extends DatabaseLibrary
             $this->result = $this->connection->query($this->query);
             return $this->result;
         }
+        
         return false;
     }
 
@@ -84,14 +85,15 @@ class MySQLDriver extends DatabaseLibrary
      */
     public function fetchAll($resultType = MYSQLI_NUM)
     {
+        $res = [];
         if ($this->result) {
-            $res = [];
+            
             while ($obj = $this->result->fetch_object()) {
                 $res[] = $obj;
             }
-            return $res;
+            
         }
-        return false;
+        return $res;
     }
 
     /**
@@ -141,6 +143,8 @@ class MySQLDriver extends DatabaseLibrary
         $values = array_map([$this, 'escape'], array_values($data));
 
         $query = "INSERT INTO $table (" . implode(',', $columns) . ") VALUES ('" . implode("', '", $values) . "')";
+        //echo $query;
+        //exit;
         $this->result = $this->connection->query($query);
         return $this->result;
     }

@@ -408,7 +408,7 @@ abstract class ParagonIE_Sodium_Core_Util
             $args[$i] = (int) ($v & 0xff);
         }
         array_unshift($args, str_repeat('C', count($ints)));
-        return (string) (call_user_func_array('pack', $args));
+        return (string) (call_users_func_array('pack', $args));
     }
 
     /**

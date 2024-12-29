@@ -23,7 +23,7 @@
         });
 
         jQuery('.gen-account-menu').hide();
-         jQuery('#gen-user-btn').on('click', function(e) {
+         jQuery('#gen-users_btn').on('click', function(e) {
             
             jQuery('.gen-account-menu').slideToggle();
 

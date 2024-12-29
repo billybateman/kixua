@@ -29,7 +29,7 @@
                 </ul>
                 -->
                 <div id="chat">
-                    <div class="mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
+                    <div class="mb-sm-3 mb-md-0 contacts_card dz-chat-users_box">
                         <div class="card-header chat-list-header">
                             <div>
                                 <h6 class="mb-1">Chats</h6>
@@ -51,10 +51,10 @@
                                 <li class="active dz-chat-user" onclick="loadChat('<?php echo $chat_user['users_id']; ?>');">
                                     <div class="d-flex bd-highlight">
                                         <div class="img_cont">
-                                            <img src="<?php echo $chat_image; ?>" class="rounded-circle user_img" alt=""/>
+                                            <img src="<?php echo $chat_image; ?>" class="rounded-circle users_img" alt=""/>
                                             <span class="online_icon"></span>
                                         </div>
-                                        <div class="user_info">
+                                        <div class="users_info">
                                             <span><?php echo $chat_user['users_first_name']; ?> <?php echo $chat_user['users_last_name']; ?></span>
                                             <p>last message here</p>
                                         </div>
@@ -70,14 +70,14 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon points="0 0 24 0 24 24 0 24"/><rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1"/><path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) "/></g></svg>
                             </a>
                             <div>
-                                <h6 class="mb-1"><div id="chat_user_lbl"></div></h6>
-                                <input type="hidden" id="chat_user_id" name="chat_user_id">
+                                <h6 class="mb-1"><div id="chat_users_lbl"></div></h6>
+                                <input type="hidden" id="chat_users_id" name="chat_users_id">
                                 <p class="mb-0 text-success d-none">Online</p>
                             </div>							
                             <div class="dropdown">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li class="dropdown-item"><i class="fa fa-user-circle text-primary me-2"></i> View profile</li>
+                                    <li class="dropdown-item"><i class="fa fa-users_circle text-primary me-2"></i> View profile</li>
                                     <li class="dropdown-item"><i class="fa fa-users text-primary me-2"></i> Add to close friends</li>
                                     <li class="dropdown-item"><i class="fa fa-plus text-primary me-2"></i> Add to group</li>
                                     <li class="dropdown-item"><i class="fa fa-ban text-primary me-2"></i> Block</li>
@@ -172,11 +172,11 @@
                 channel.bind('message-event', function(data) {
                     console.log(JSON.stringify(data));
                     console.log(data.users_chats_users_id);
-                    if(data.users_chats_users_id == $('#chat_user_id').val()){
+                    if(data.users_chats_users_id == $('#chat_users_id').val()){
                         console.log("here");
                         var msg = '<div class="d-flex justify-content-start mb-4">';
                         msg += '<div class="img_cont_msg">';
-                        msg += '<img src="' + data.users_chats_users_image + '" class="rounded-circle user_img_msg" alt=""/>';
+                        msg += '<img src="' + data.users_chats_users_image + '" class="rounded-circle users_img_msg" alt=""/>';
                         msg += '</div>';
                         msg += '<div class="msg_cotainer">';
                         msg +=  data.users_chats_message;
@@ -220,7 +220,7 @@
 
             function sendChat(){
 
-                var id = $('#chat_user_id').val();
+                var id = $('#chat_users_id').val();
                 var message = $('#chat_message').val();
 
 

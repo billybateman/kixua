@@ -1,6 +1,5 @@
 <?php
 
-
 ini_set('error_reporting', E_STRICT);
 
 /** Configuration Variables **/
@@ -11,31 +10,37 @@ define ('DEVELOPMENT_ENVIRONMENT',true);
 define('CDN_FOLDER', __APP_PATH."/cdn");
 define('CDN_URL', "/cdn");
 
-$config['libraries'] =  array(
-    'session'
+$config['libraries'] = array (
+  0 => 'session',
 );
 
-$config['models'] =  array(
-    'usersmodel', 
-    'users_types_model',
-    'notifications_model',
-    'images_model',
-    'files_model',
-    'sites_model',
-    'users_online_model',
-    'products_model',
-    'services_model',
-    'invoices_model',
-    'payments_model',
-    'subscriptions_model',
-    'clients_model'
+$config['models'] = array (
+  0 => 'projects_model',
+  1 => 'tasks_model',
+  2 => 'clients_model',
+  3 => 'contracts_model',
+  4 => 'customers_model',
+  5 => 'files_model',
+  6 => 'forms_model',
+  7 => 'images_model',
+  8 => 'invoices_model',
+  9 => 'notifications_model',
+  10 => 'payments_model',
+  11 => 'products_model',
+  12 => 'profile_model',
+  13 => 'services_model',
+  14 => 'sites_model',
+  15 => 'subscriptions_model',
+  16 => 'users_online_model',
+  17 => 'users_types_model',
+  18 => 'usersmodel',
 );
 
-$config['helpers'] =  array(
-'urlhelper',
-'confighelper'
+$config['helpers'] = array (
+  0 => 'urlhelper',
+  1 => 'confighelper',
 );
-        
+
 define('SITE_NAME', 'Kixua Demo');
 define('SITE_URL', 'http://localhost:8888/');
 define('SITE_LOGO', '/assets/images/logo.png');

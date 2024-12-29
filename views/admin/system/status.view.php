@@ -12,7 +12,7 @@ $serverStatus = [
 ];
 ?>
 <div class="container-fluid">
-    <h1 class="mt-3">Server Status</h1>
+    <h4 class="mb-0">Server Status</h1>
     <p>View the current status of the server.</p>
     <button class="btn btn-secondary mb-3" onclick="location.reload();">Refresh</button>
     <div class="row">

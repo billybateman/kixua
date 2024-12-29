@@ -2,6 +2,10 @@
 
 class confighelper extends helper {
     
+
+    public static function runTest() {
+        echo "Config helper activated.";
+    }
     /**
      * Updates the models array in config.php file
      * @param array $new_models Array of new models to add

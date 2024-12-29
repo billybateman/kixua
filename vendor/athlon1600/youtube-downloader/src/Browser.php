@@ -10,12 +10,12 @@ class Browser extends BrowserClient
 {
     public function setUserAgent(string $agent): void
     {
-        $this->headers['User-Agent'] = $agent;
+        $this->headers['users_Agent'] = $agent;
     }
 
     public function getUserAgent(): ?string
     {
-        return Utils::arrayGet($this->headers, 'User-Agent');
+        return Utils::arrayGet($this->headers, 'users_Agent');
     }
 
     public function followRedirects(bool $enabled): self

@@ -231,13 +231,13 @@ var Mophy = function(){
 	}
 	
 	var handledzChatUser = function() {
-		jQuery('.dz-chat-user-box .dz-chat-user').on('click',function(){
-			jQuery('.dz-chat-user-box').addClass('d-none');
+		jQuery('.dz-chat-users_box .dz-chat-user').on('click',function(){
+			jQuery('.dz-chat-users_box').addClass('d-none');
 			jQuery('.dz-chat-history-box').removeClass('d-none');
 		}); 
 		
 		jQuery('.dz-chat-history-back').on('click',function(){
-			jQuery('.dz-chat-user-box').removeClass('d-none');
+			jQuery('.dz-chat-users_box').removeClass('d-none');
 			jQuery('.dz-chat-history-box').addClass('d-none');
 		}); 
 		

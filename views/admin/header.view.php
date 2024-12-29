@@ -112,7 +112,7 @@
                                         <div class="d-flex border-bottom align-items-start">
                                             <div class="flex-shrink-0">
                                                 <img src="/assets/admin/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-sm"
-                                                    alt="user-pic">
+                                                    alt="users_pic">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h6 class="mb-1">Justin Verduzco</h6>
@@ -172,7 +172,7 @@
                                         <div class="d-flex border-bottom align-items-start">
                                             <div class="flex-shrink-0">
                                                 <img src="/assets/admin/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-sm"
-                                                    alt="user-pic">
+                                                    alt="users_pic">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h6 class="mb-1">Salena Layfield</h6>
@@ -207,12 +207,12 @@
 						?>
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item user text-start d-flex align-items-center"
-                                id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                id="page-header-users_dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?php echo $profile_image; ?>"
                                     alt="Header Avatar">
-                                <span class="ms-2 d-none d-sm-block user-item-desc">
-                                    <span class="user-name"><?php echo $user['users_first_name']; ?> <?php echo $user['users_last_name']; ?></span>
-                                    <span class="user-sub-title"><?php echo $user['users_types_name']; ?></span>
+                                <span class="ms-2 d-none d-sm-block users_item-desc">
+                                    <span class="users_name"><?php echo $user['users_first_name']; ?> <?php echo $user['users_last_name']; ?></span>
+                                    <span class="users_sub-title"><?php echo $user['users_types_name']; ?></span>
                                 </span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -226,11 +226,11 @@
                                 <a class="dropdown-item" href="index.html"><i
                                         class="mdi mdi-calendar-check-outline text-muted font-size-16 align-middle me-1"></i> <span
                                         class="align-middle">Taskboard</span></a>
-                                <a class="dropdown-item" href="user-profile.html"><i
+                                <a class="dropdown-item" href="users_profile.html"><i
                                         class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span
                                         class="align-middle">Help</span></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="user-profile.html"><i
+                                <a class="dropdown-item" href="users_profile.html"><i
                                         class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span
                                         class="align-middle">Balance : <b>$6951.02</b></span></a>
                                 <a class="dropdown-item d-flex align-items-center" href="project-file-manager.html"><i
@@ -291,7 +291,7 @@
                     </li>
                         -->
                 
-                    <li class="menu-title" data-key="t-user-management">User Management</li>
+                    <li class="menu-title" data-key="t-users_management">User Management</li>
                     <li>
                         <a class="content-loader" href="/admin/users">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users icon nav-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -307,7 +307,7 @@
                     <li>
                         <a class="content-loader" href="/admin/logs/users">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard icon nav-icon"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-                            <span class="menu-item" data-key="t-user-logs">User Activity Logs</span>
+                            <span class="menu-item" data-key="t-users_logs">User Activity Logs</span>
                         </a>
                     </li>
                     <li>

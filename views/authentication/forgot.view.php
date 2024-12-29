@@ -41,7 +41,7 @@
                             
                             <p class="font-weight-bold">You will receive a new password via email.</p>
                             <p class="login-username">
-                                <label for="user_login">Email Address</label>
+                                <label for="users_login">Email Address</label>
                                 <input type="text" name="email" id="email" class="input" value="" size="20" required>
                             </p>
                             <p class="login-submit">

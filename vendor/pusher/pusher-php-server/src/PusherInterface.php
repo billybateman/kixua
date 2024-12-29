@@ -135,12 +135,12 @@ interface PusherInterface
     /**
      * Creates a presence signature (an extension of socket signing).
      *
-     * @param mixed  $user_info
+     * @param mixed  $users_info
      *
      * @throws PusherException Throws exception if $channel is invalid or above or $socket_id is invalid
      *
      */
-    public function presenceAuth(string $channel, string $socket_id, string $user_id, $user_info = null): string;
+    public function presenceAuth(string $channel, string $socket_id, string $users_id, $users_info = null): string;
 
     /**
      * Verify that a webhook actually came from Pusher, decrypts any
@@ -236,12 +236,12 @@ interface PusherInterface
      *
      * @deprecated in favour of presenceAuth
      *
-     * @param mixed  $user_info
+     * @param mixed  $users_info
      *
      * @throws PusherException Throws exception if $channel is invalid or above or $socket_id is invalid
      *
      */
-    public function presence_auth(string $channel, string $socket_id, string $user_id, $user_info = null): string;
+    public function presence_auth(string $channel, string $socket_id, string $users_id, $users_info = null): string;
 
     /**
      * Verify that a given Pusher Signature is valid.

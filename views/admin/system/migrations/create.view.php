@@ -1,6 +1,6 @@
 
 <div class="container-fluid">
-    <h1 class="mt-3">Create New Migration</h1>
+    <h4 class="mb-0">Create New Migration</h1>
     <script type="text/javascript">
         $('#create').submit(function() { // catch the form's submit event
 

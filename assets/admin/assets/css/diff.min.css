@@ -200,18 +200,18 @@ padding:3px;
 width:36px
 }
 
-.user .user-item-desc {
+.user .users_item-desc {
 line-height:1.2
 }
 
-.user .user-name {
+.user .users_name {
 color:#495057;
 display:block;
 font-size:14.4px;
 font-weight:600
 }
 
-.user .user-sub-title {
+.user .users_sub-title {
 color:#74788d;
 font-size:11px;
 font-weight:600
@@ -293,11 +293,11 @@ body[data-topbar="dark"] .header-profile-user {
 border-color:#ffffff40
 }
 
-body[data-topbar="dark"] .user-name {
+body[data-topbar="dark"] .users_name {
 color:#e9ecef
 }
 
-body[data-topbar="dark"] .user-sub-title {
+body[data-topbar="dark"] .users_sub-title {
 color:#ffffff80
 }
 
@@ -4237,7 +4237,7 @@ border-radius:4px;
 color:#343a40
 }
 
-.user-chat-nav .dropdown .nav-btn {
+.users_chat-nav .dropdown .nav-btn {
 background-color:#f5f6f8;
 border-radius:50%;
 box-shadow:none;
@@ -4248,7 +4248,7 @@ padding:0;
 width:40px
 }
 
-.user-chat-nav .dropdown .dropdown-menu {
+.users_chat-nav .dropdown .dropdown-menu {
 border:1px solid #eff0f2;
 box-shadow:0 2px 3px #343a400f
 }
@@ -4439,11 +4439,11 @@ min-width:auto
 }
 }
 
-.chat-user-img {
+.chat-users_img {
 position:relative!important
 }
 
-.chat-user-img .user-status {
+.chat-users_img .users_status {
 background-color:#adb5bd;
 border:2px solid #fff;
 border-radius:50%;
@@ -4454,15 +4454,15 @@ right:0;
 width:12px
 }
 
-.chat-user-img.online .user-status {
+.chat-users_img.online .users_status {
 background-color:#51d28c
 }
 
-.chat-user-img.away .user-status {
+.chat-users_img.away .users_status {
 background-color:#f7cc53
 }
 
-.user-img {
+.users_img {
 height:2.5rem;
 width:2.5rem
 }
@@ -4575,7 +4575,7 @@ position:absolute;
 right:0
 }
 
-.profile-user .user-profile-img {
+.profile-user .users_profile-img {
 object-fit:cover
 }
 
@@ -25742,7 +25742,7 @@ box-shadow:none
 height:40px
 }
 
-.chatbox .user_info span {
+.chatbox .users_info span {
 color:#000;
 display:block;
 font-size:15px;
@@ -25755,11 +25755,11 @@ text-overflow:ellipsis;
 white-space:nowrap
 }
 
-[data-theme-version="dark"] .chatbox .user_info span {
+[data-theme-version="dark"] .chatbox .users_info span {
 color:#fff
 }
 
-.chatbox .user_info p {
+.chatbox .users_info p {
 display:block;
 font-size:13px;
 line-height:1;
@@ -39895,7 +39895,7 @@ border-color:#333a54!important
 border-color:#333a54
 }
 
-[data-theme-version="dark"] #user-activity .nav-tabs .nav-link {
+[data-theme-version="dark"] #users_activity .nav-tabs .nav-link {
 border-color:#333a54
 }
 
@@ -41625,7 +41625,7 @@ color:#fff
 height:253px!important
 }
 
-#user_rating_graph {
+#users_rating_graph {
 height:280px!important
 }
 
@@ -55053,7 +55053,7 @@ border-color:#333a54!important
 border-color:#333a54
 }
 
-[data-theme-version="dark"] #user-activity .nav-tabs .nav-link {
+[data-theme-version="dark"] #users_activity .nav-tabs .nav-link {
 border-color:#333a54
 }
 
@@ -55693,7 +55693,7 @@ display:inline-flex;
 justify-content:center
 }
 
-.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .user-header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
+.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .users_header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
 display:-webkit-box
 }
 
@@ -55783,7 +55783,7 @@ span,.footer .footer-top .footer-widget .footer-about-content .social-icon ul li
 display:-webkit-inline-box
 }
 
-.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .user-header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
+.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .users_header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
 display:-webkit-box
 }
 
@@ -56584,7 +56584,7 @@ display:inline-flex;
 justify-content:center
 }
 
-.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .user-header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
+.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .users_header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
 display:-webkit-box
 }
 
@@ -56674,7 +56674,7 @@ span,.footer .footer-top .footer-widget .footer-about-content .social-icon ul li
 display:-webkit-inline-box
 }
 
-.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .user-header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
+.footer.footer-sec-fourteen .footer-bottom .payment-method,.footer.footer-sec-fourteen .footer-mid-two .footer-links-middle ul li,.faq-sec-fourteen .faq-card a,.our-best-work-sec .best-work-video .treatment-video a,.widget-setcount ul,.onboarding-content .increment-decrement .input-groups input[type="button"],.relative-form,.option-set,.select-gender-option,.onboarding-contents,.opt-resend,.set-path,.prefer-box,.call-lable.verify-lable.verify-options,.call-lable.verify-lable.verify-lable,.call-lable,.consult-option,.save-detail,.upload-pic.patient-photo-upload,.upload-pic,.onboarding-content-box.content-wrap,.onboarding-progress,.on-board-wizard ul li a,#onboard-slider .owl-dots,.right-panel,.left-panel,.onboard-wrapper,.review-grid,.cart-search form,.contact-section-fourteen .contact-schedule-main .scheduling-left-main ul,.banner-wrapper .search-box-3 form,.map-listing .profile-widget,.doctor-widget-one .doc-info-left,.doctor-widget-one,.clinic-services,.doc-info-left,.doctor-widget,.call-timing,.call-details,.password-strength,.increment-decrement .input-groups,.login-bottom-copyright,.custom-increment .input-group1,.patient-graph-col .graph-box .graph-status-result,.patient-graph-col .graph-box,.patient-graph-box,.patient-dashboard-top,.change-avatar,.profile-info-widget,.dash-card .dash-widget,.upload-wrap,.review-listing > ul li .comment .comment-body .meta-data .review-count,.review-listing > ul li .comment,.appointments .appointment-list,.appointment-list .profile-info-widget,.booking-device,.success-page-cont,.booking-doc-info,.work-info,.section-search .banner-wrapper .search-box form,.footer-two .footer-top .footer-widget .footer-contact-info .footer-address,.footer-one .footer-top .footer-widget .footer-contact-info .footer-address,.footer .footer-top .footer-widget .footer-contact-info .footer-address,.header.header-ten .main-menu-wrapper .main-nav,.header-one .main-menu-wrapper .main-nav,.header .header-nav .header-navbar-rht .has-arrow .users_header,.header .header-nav .header-navbar-rht .dropdown-menu .dropdown-item,.header .header-nav .main-nav,.header .header-nav,.avatar .avatar-title {
 display:-webkit-box
 }
 
@@ -60111,7 +60111,7 @@ width:8px
 transform:rotate(-135deg)
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .dropdown-toggle .user-img {
+.header .header-nav .header-navbar-rht .has-arrow .dropdown-toggle .users_img {
 display:inline-block;
 margin-bottom:5px;
 position:relative
@@ -60122,7 +60122,7 @@ position:relative
 .header-navbar-rht
 .has-arrow
 .dropdown-toggle
-.user-img
+.users_img
 > img {
 border:1px solid #1d7ed8;
 height:31px;
@@ -60130,22 +60130,22 @@ object-fit:cover;
 width:31px
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .user-header {
+.header .header-nav .header-navbar-rht .has-arrow .users_header {
 background:#f8fafc;
 border-radius:10px;
 padding:10px 15px
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .user-header .user-text {
+.header .header-nav .header-navbar-rht .has-arrow .users_header .users_text {
 margin-left:10px
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .user-header .user-text h6 {
+.header .header-nav .header-navbar-rht .has-arrow .users_header .users_text h6 {
 font-size:15px;
 margin-bottom:2px
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .user-header .avatar img {
+.header .header-nav .header-navbar-rht .has-arrow .users_header .avatar img {
 border:1px solid #1d7ed8
 }
 
@@ -60437,14 +60437,14 @@ color:#28daf4!important;
 font-size:12px
 }
 
-.header .user-menu {
+.header .users_menu {
 float:right;
 margin:0;
 position:relative;
 z-index:99
 }
 
-.header .user-menu.nav li a {
+.header .users_menu.nav li a {
 color:#fff;
 font-size:14px;
 height:60px;
@@ -60452,15 +60452,15 @@ line-height:58px;
 padding:0 15px
 }
 
-.header .user-menu.nav li a:hover,.header .user-menu.nav li a:focus {
+.header .users_menu.nav li a:hover,.header .users_menu.nav li a:focus {
 background-color:#0003
 }
 
-.header .user-menu.nav li a:hover i,.header .user-menu.nav li a:focus i {
+.header .users_menu.nav li a:hover i,.header .users_menu.nav li a:focus i {
 color:#fff
 }
 
-.header .user-menu.nav li a.mobile_btn {
+.header .users_menu.nav li a.mobile_btn {
 border:0;
 cursor:pointer;
 margin:0;
@@ -63251,7 +63251,7 @@ color:#42c0fb
 .header-navbar-rht
 li.login-in-fourteen
 .reg-btn-thirteen
-.user-icon-header {
+.users_icon-header {
 align-items:center;
 background:#0f78e7;
 border:1px solid #0e82fd;
@@ -63274,7 +63274,7 @@ span,.header.header-fourteen.header-twelve.header-thirteen
 .header-navbar-rht
 li.login-in-fourteen
 .reg-btn-thirteen:hover
-.user-icon-header {
+.users_icon-header {
 background:#fff;
 color:#0e82fd
 }
@@ -72096,11 +72096,11 @@ color:#fff
 }
 
 @media (max-width: 767.98px) {
-.user-tabs {
+.users_tabs {
 margin-top:1.5rem
 }
 
-.user-tabs .nav-tabs {
+.users_tabs .nav-tabs {
 background-color:#fff;
 border:1px solid #ddd;
 border-bottom:0;
@@ -72110,7 +72110,7 @@ position:relative
 }
 }
 
-.user-tabs .nav-tabs > li > a {
+.users_tabs .nav-tabs > li > a {
 border:0;
 border-bottom:3px solid transparent;
 color:#3e3e3e;
@@ -72118,52 +72118,52 @@ font-weight:700;
 padding:20px
 }
 
-.user-tabs .nav-tabs > li > a:hover {
+.users_tabs .nav-tabs > li > a:hover {
 background-color:unset;
 color:#20c0f3
 }
 
 @media (max-width: 767.98px) {
-.user-tabs .nav-tabs > li > a {
+.users_tabs .nav-tabs > li > a {
 border-bottom:0;
 border-left:2px solid transparent;
 padding:.5rem 1rem
 }
 
-.user-tabs .nav-tabs.nav-justified {
+.users_tabs .nav-tabs.nav-justified {
 border-bottom:1px solid #ddd
 }
 
-.user-tabs .nav-tabs .nav-item {
+.users_tabs .nav-tabs .nav-item {
 flex:0 0 100%
 }
 }
 
 @media (max-width: 479.98px) {
-.user-tabs .nav-tabs .nav-item {
+.users_tabs .nav-tabs .nav-item {
 flex:0 0 100%
 }
 }
 
-.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active,.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active:hover,.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active:focus {
+.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active,.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active:hover,.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active:focus {
 border-bottom-width:3px;
 color:#20c0f3
 }
 
 @media (max-width: 767.98px) {
-.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active,.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active:hover,.user-tabs .nav-tabs.nav-tabs-bottom > li > a.active:focus {
+.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active,.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active:hover,.users_tabs .nav-tabs.nav-tabs-bottom > li > a.active:focus {
 border-left-width:2px;
 color:#20c0f3
 }
 }
 
-.user-tabs .med-records {
+.users_tabs .med-records {
 display:inline-block;
 min-width:130px
 }
 
 @media (max-width: 575.98px) {
-.user-tabs .med-records {
+.users_tabs .med-records {
 min-width:110px
 }
 }
@@ -73722,20 +73722,20 @@ margin-bottom:15px;
 padding:24px
 }
 
-.doc-review-card .user-info-review {
+.doc-review-card .users_info-review {
 align-items:center;
 display:flex;
 flex-wrap:wrap;
 justify-content:space-between
 }
 
-.doc-review-card .user-info-review .reviewer-img {
+.doc-review-card .users_info-review .reviewer-img {
 align-items:center;
 display:flex;
 margin-bottom:10px
 }
 
-.doc-review-card .user-info-review .reviewer-img .avatar-img {
+.doc-review-card .users_info-review .reviewer-img .avatar-img {
 align-items:center;
 border-radius:50%;
 display:inline-flex;
@@ -73745,26 +73745,26 @@ margin-right:10px;
 width:60px
 }
 
-.doc-review-card .user-info-review .reviewer-img .avatar-img img {
+.doc-review-card .users_info-review .reviewer-img .avatar-img img {
 border-radius:50%
 }
 
-.doc-review-card .user-info-review .reviewer-img .review-star a {
+.doc-review-card .users_info-review .reviewer-img .review-star a {
 color:#0f172a;
 font-weight:500;
 margin-bottom:5px
 }
 
-.doc-review-card .user-info-review .reviewer-img .review-star .rating {
+.doc-review-card .users_info-review .reviewer-img .review-star .rating {
 margin-bottom:0
 }
 
-.doc-review-card .user-info-review .reviewer-img .review-star .rating span {
+.doc-review-card .users_info-review .reviewer-img .review-star .rating span {
 color:#1e293b;
 font-size:14px
 }
 
-.doc-review-card .user-info-review .thumb-icon {
+.doc-review-card .users_info-review .thumb-icon {
 align-items:center;
 color:#059669;
 display:inline-flex;
@@ -73773,7 +73773,7 @@ font-weight:500;
 margin-bottom:10px
 }
 
-.doc-review-card .user-info-review .thumb-icon i {
+.doc-review-card .users_info-review .thumb-icon i {
 margin-right:5px
 }
 
@@ -73797,7 +73797,7 @@ margin-top:15px;
 padding:24px
 }
 
-.doc-review-card .replied-info .user-info-review .reviewer-img .review-star a {
+.doc-review-card .replied-info .users_info-review .reviewer-img .review-star a {
 margin-bottom:0
 }
 
@@ -74932,7 +74932,7 @@ margin-top:15px
 }
 }
 
-.user-header .user-text p {
+.users_header .users_text p {
 color:#1ca345!important;
 font-size:12px;
 font-weight:500
@@ -75003,7 +75003,7 @@ padding:5px 10px
 background:#f8fafc
 }
 
-.header .header-nav .header-navbar-rht .has-arrow .user-header .user-text h6 {
+.header .header-nav .header-navbar-rht .has-arrow .users_header .users_text h6 {
 font-size:16px;
 font-weight:600
 }
@@ -76162,16 +76162,16 @@ padding:15px 24px;
 position:relative
 }
 
-.main-chat-blk .chat .chat-header .user-details {
+.main-chat-blk .chat .chat-header .users_details {
 align-items:center;
 display:flex
 }
 
-.main-chat-blk .chat .chat-header .user-details figure {
+.main-chat-blk .chat .chat-header .users_details figure {
 margin-right:1rem
 }
 
-.main-chat-blk .chat .chat-header .user-details h5 {
+.main-chat-blk .chat .chat-header .users_details h5 {
 color:#0f172a;
 font-size:18px;
 font-weight:500;
@@ -76180,7 +76180,7 @@ margin-bottom:4px
 }
 
 @media (max-width: 991.98px) {
-.main-chat-blk .chat .chat-header .user-details h5 {
+.main-chat-blk .chat .chat-header .users_details h5 {
 font-size:15px
 }
 }
@@ -76825,7 +76825,7 @@ font-size:14px
 }
 }
 
-.main-chat-blk .user_callog {
+.main-chat-blk .users_callog {
 display:flex;
 margin-top:0
 }
@@ -76972,13 +76972,13 @@ color:#6b7280;
 font-size:16px
 }
 
-.main-chat-blk .user-chat-search {
+.main-chat-blk .users_chat-search {
 position:relative;
 transition:ease all .5s;
 width:100%
 }
 
-.main-chat-blk .user-chat-search input[type="text"] {
+.main-chat-blk .users_chat-search input[type="text"] {
 background-color:#fff;
 border:1px solid #e2e8f0;
 border-radius:6px;
@@ -76990,19 +76990,19 @@ padding:8px 35px 8px 15px;
 width:100%
 }
 
-.main-chat-blk .user-chat-search input[type="text"]:hover {
+.main-chat-blk .users_chat-search input[type="text"]:hover {
 border-color:#e2e8f0
 }
 
-.main-chat-blk .user-chat-search input[type="text"]:focus {
+.main-chat-blk .users_chat-search input[type="text"]:focus {
 border-color:#e2e8f0
 }
 
-.main-chat-blk .user-chat-search input[type="text"]:focus-visible {
+.main-chat-blk .users_chat-search input[type="text"]:focus-visible {
 border-color:#e2e8f0
 }
 
-.main-chat-blk .user-chat-search.visible-chat {
+.main-chat-blk .users_chat-search.visible-chat {
 opacity:1;
 top:100%;
 transition:ease all .5s;
@@ -77028,7 +77028,7 @@ top:10px;
 width:25px
 }
 
-.main-chat-blk .user-close-btn-chat {
+.main-chat-blk .users_close-btn-chat {
 align-items:center;
 border-radius:25px;
 color:#002578;
@@ -77627,14 +77627,14 @@ color:#0e82fd;
 font-size:18px
 }
 
-.main-chat-blk .user-list {
+.main-chat-blk .users_list {
 border-radius:.25rem;
 display:flex;
 margin-bottom:0;
 padding-left:0
 }
 
-.main-chat-blk .user-list li a {
+.main-chat-blk .users_list li a {
 border:0;
 border-radius:6px;
 box-shadow:0 2px 8px #00000014;
@@ -77644,7 +77644,7 @@ margin-bottom:10px;
 padding:17px 20px
 }
 
-.main-chat-blk .user-list li .avatar {
+.main-chat-blk .users_list li .avatar {
 border-radius:50%;
 display:inline-block;
 height:46px;
@@ -77655,7 +77655,7 @@ width:46px;
 z-index:0
 }
 
-.main-chat-blk .user-list li .avatar .letter-avatar {
+.main-chat-blk .users_list li .avatar .letter-avatar {
 align-items:center;
 background-color:#0e82fd;
 border-radius:45px;
@@ -77671,17 +77671,17 @@ position:relative;
 width:45px
 }
 
-.main-chat-blk .user-list li a.admin-shade {
+.main-chat-blk .users_list li a.admin-shade {
 box-shadow:none
 }
 
-.main-chat-blk .user-list .avatar > a > img {
+.main-chat-blk .users_list .avatar > a > img {
 height:100%;
 object-fit:cover;
 width:100%
 }
 
-.main-chat-blk .user-list .avatar > img {
+.main-chat-blk .users_list .avatar > img {
 border-radius:10px;
 height:100%;
 object-fit:cover;
@@ -78571,7 +78571,7 @@ padding:10px
 margin-top:10px
 }
 
-.main-chat-blk .participants-list .users-list-body {
+.main-chat-blk .participants-list .users_list-body {
 display:flex;
 flex:1;
 min-width:0;
@@ -78579,7 +78579,7 @@ position:relative;
 width:100%
 }
 
-.main-chat-blk .participants-list .users-list-body h5 {
+.main-chat-blk .participants-list .users_list-body h5 {
 color:#0e82fd;
 font-size:15px;
 font-weight:500;
@@ -78589,7 +78589,7 @@ text-overflow:ellipsis;
 white-space:nowrap
 }
 
-.main-chat-blk .participants-list .users-list-body p {
+.main-chat-blk .participants-list .users_list-body p {
 color:#0e82fd;
 font-size:14px;
 font-weight:400;
@@ -79483,7 +79483,7 @@ border-color:#e6e6e6;
 color:#0e82fd
 }
 
-.main-chat-blk .sidebar .user-list li a {
+.main-chat-blk .sidebar .users_list li a {
 border:1px solid #e0e0e0;
 border-radius:5px;
 box-shadow:none;
@@ -79495,21 +79495,21 @@ position:relative;
 transition:ease all .5s
 }
 
-.main-chat-blk .sidebar .user-list li a:hover {
+.main-chat-blk .sidebar .users_list li a:hover {
 background-color:#f1f5f9;
 border:1px solid #f1f5f9;
 transition:ease all .5s
 }
 
-.main-chat-blk .sidebar .user-list li.item-typing {
+.main-chat-blk .sidebar .users_list li.item-typing {
 background-color:#f1f6ff
 }
 
-.main-chat-blk .sidebar .user-list li figure {
+.main-chat-blk .sidebar .users_list li figure {
 margin-right:1rem
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body {
+.main-chat-blk .sidebar .users_list li .users_list-body {
 display:flex;
 flex:1;
 min-width:0;
@@ -79520,7 +79520,7 @@ position:relative
 color:#000
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body > div:first-child {
+.main-chat-blk .sidebar .users_list li .users_list-body > div:first-child {
 display:flex;
 flex:1;
 min-width:0
@@ -79532,7 +79532,7 @@ display:flex;
 margin-bottom:0!important
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body h5 {
+.main-chat-blk .sidebar .users_list li .users_list-body h5 {
 color:#0f172a;
 font-size:16px;
 font-weight:500;
@@ -79542,7 +79542,7 @@ text-overflow:ellipsis;
 white-space:nowrap
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body p {
+.main-chat-blk .sidebar .users_list li .users_list-body p {
 color:#334155;
 font-size:14px;
 margin-bottom:0;
@@ -79551,20 +79551,20 @@ text-overflow:ellipsis;
 white-space:nowrap
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body p.missed-call-col {
+.main-chat-blk .sidebar .users_list li .users_list-body p.missed-call-col {
 color:#de3e44
 }
 
-.main-chat-blk .sidebar .user-list li .users-list-body .last-chat-time {
+.main-chat-blk .sidebar .users_list li .users_list-body .last-chat-time {
 padding-left:15px;
 position:relative
 }
 
 .main-chat-blk
 .sidebar
-.user-list
+.users_list
 li
-.users-list-body
+.users_list-body
 .last-chat-time
 .text-muted {
 color:#334155!important;
@@ -79577,9 +79577,9 @@ text-align:right
 
 .main-chat-blk
 .sidebar
-.user-list
+.users_list
 li
-.users-list-body
+.users_list-body
 .last-chat-time
 .contact-toggle {
 color:#680a83
@@ -79587,9 +79587,9 @@ color:#680a83
 
 .main-chat-blk
 .sidebar
-.user-list
+.users_list
 li
-.users-list-body
+.users_list-body
 .last-chat-time
 .new-message-count {
 align-items:center;
@@ -79611,9 +79611,9 @@ width:20px
 
 .main-chat-blk
 .sidebar
-.user-list
+.users_list
 li
-.users-list-body
+.users_list-body
 .last-chat-time
 .chat-toggle {
 bottom:0;
@@ -79626,23 +79626,23 @@ transition:all .5s ease;
 width:18px
 }
 
-.main-chat-blk .sidebar .user-list li.unread h5 {
+.main-chat-blk .sidebar .users_list li.unread h5 {
 color:#fff
 }
 
-.main-chat-blk .sidebar .user-list li.unread p {
+.main-chat-blk .sidebar .users_list li.unread p {
 color:#fff
 }
 
-.main-chat-blk .sidebar .user-list li.unread .text-muted {
+.main-chat-blk .sidebar .users_list li.unread .text-muted {
 color:#fff6!important
 }
 
 .main-chat-blk
 .sidebar
-.user-list
-li.user-list-item.item-typing
-.users-list-body
+.users_list
+li.users_list-item.item-typing
+.users_list-body
 p {
 color:#0d9b35
 }
@@ -80020,7 +80020,7 @@ display:-webkit-box;
 justify-content:space-between
 }
 
-.chat-cont-left .chat-scroll .media .media-body .user-name {
+.chat-cont-left .chat-scroll .media .media-body .users_name {
 color:#0e82fd;
 font-size:16px;
 font-weight:700;
@@ -80030,7 +80030,7 @@ text-overflow:ellipsis;
 white-space:nowrap
 }
 
-.chat-cont-left .chat-scroll .media .media-body .user-last-chat {
+.chat-cont-left .chat-scroll .media .media-body .users_last-chat {
 color:#0e82fd;
 font-size:14px;
 line-height:24px;
@@ -80058,7 +80058,7 @@ max-height:calc(100vh - 293px);
 overflow-y:auto
 }
 
-.chat-cont-right .msg_head .back-user-list {
+.chat-cont-right .msg_head .back-users_list {
 display:none;
 margin:0 0 0 -10px;
 padding:0 10px
@@ -80070,14 +80070,14 @@ position:relative;
 width:45px
 }
 
-.chat-cont-right .img_cont .user_img {
+.chat-cont-right .img_cont .users_img {
 border:1.5px solid #0e82fd;
 height:45px;
 min-width:45px;
 width:45px
 }
 
-.chat-cont-right .user_info {
+.chat-cont-right .users_info {
 margin:0 auto 0 15px;
 overflow:hidden;
 padding:0;
@@ -80481,7 +80481,7 @@ visibility:hidden;
 z-index:99
 }
 
-.chat-cont-right .msg_head .back-user-list {
+.chat-cont-right .msg_head .back-users_list {
 align-items:center;
 display:flex
 }
@@ -82218,7 +82218,7 @@ min-height:auto;
 padding:0
 }
 
-.fixed-header .user-info a {
+.fixed-header .users_info a {
 color:#272b41;
 font-weight:500
 }
@@ -82392,7 +82392,7 @@ padding:8px 25px;
 text-transform:uppercase
 }
 
-.user-video {
+.users_video {
 bottom:0;
 left:0;
 overflow:auto;
@@ -82402,7 +82402,7 @@ top:0;
 z-index:10
 }
 
-.user-video img,.user-video video {
+.users_video img,.users_video video {
 display:block;
 height:auto;
 margin:0 auto;
@@ -82533,7 +82533,7 @@ margin-left:10px;
 width:100%
 }
 
-.call-user-details,.call-timing {
+.call-users_details,.call-timing {
 display:block;
 overflow:hidden;
 text-overflow:ellipsis;
@@ -82568,7 +82568,7 @@ padding:0
 padding:18px 15px
 }
 
-.user-img {
+.users_img {
 display:inline-block;
 position:relative
 }
@@ -85092,32 +85092,32 @@ color:#0f172a;
 margin-bottom:0
 }
 
-.canceled-user-info {
+.canceled-users_info {
 justify-content:space-between;
 margin-bottom:24px
 }
 
 @media (max-width: 575.98px) {
-.canceled-user-info {
+.canceled-users_info {
 display:block!important
 }
 
-.canceled-user-info .email-info ul {
+.canceled-users_info .email-info ul {
 margin-top:15px
 }
 }
 
-.canceled-user-info .email-info ul li {
+.canceled-users_info .email-info ul li {
 align-items:center;
 color:#1e293b;
 display:flex
 }
 
-.canceled-user-info .email-info ul li i {
+.canceled-users_info .email-info ul li i {
 margin-right:5px
 }
 
-.canceled-user-info .email-info ul li + li {
+.canceled-users_info .email-info ul li + li {
 margin-top:5px
 }
 
@@ -88729,7 +88729,7 @@ width:48px
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 span {
 color:#9ca3af;
 font-size:14px
@@ -88741,7 +88741,7 @@ font-size:14px
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 h6 {
 font-size:16px;
 font-weight:400;
@@ -89447,7 +89447,7 @@ padding:24px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details {
+.testimonial-users_details {
 align-items:center;
 border-bottom:1px solid #e5e7eb;
 display:flex;
@@ -89459,8 +89459,8 @@ padding-bottom:22px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
-.testimonial-user-img {
+.testimonial-users_details
+.testimonial-users_img {
 border-radius:50%;
 height:48px;
 margin-right:10px;
@@ -89471,8 +89471,8 @@ width:48px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
-.testimonial-user-name
+.testimonial-users_details
+.testimonial-users_name
 h5 {
 color:#000;
 font-weight:600;
@@ -89482,8 +89482,8 @@ margin-bottom:5px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
-.testimonial-user-name
+.testimonial-users_details
+.testimonial-users_name
 p {
 color:#374151;
 font-size:12px;
@@ -89493,8 +89493,8 @@ margin-bottom:0
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
-.testimonial-user-name
+.testimonial-users_details
+.testimonial-users_name
 .circle-rating
 i {
 color:#ffca42
@@ -89503,7 +89503,7 @@ color:#ffca42
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
+.testimonial-users_details
 .rating {
 width:auto
 }
@@ -89511,7 +89511,7 @@ width:auto
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
+.testimonial-users_details
 .rating
 i {
 font-size:14px
@@ -89520,7 +89520,7 @@ font-size:14px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testimonial-user-details
+.testimonial-users_details
 .rating
 i.filled {
 color:#eaab08
@@ -89529,7 +89529,7 @@ color:#eaab08
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testmonial-user-coments
+.testmonial-users_coments
 h6 {
 color:#0e82fd;
 font-size:16px;
@@ -89540,7 +89540,7 @@ margin-bottom:12px
 .main-wrapper.home-ten
 .need-to-know-section.testimonial-section-ten
 .testimonial-card
-.testmonial-user-coments
+.testmonial-users_coments
 p {
 color:#374151;
 display:-webkit-box;
@@ -89927,7 +89927,7 @@ width:48px
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 span {
 color:#374151;
 font-size:14px
@@ -89941,7 +89941,7 @@ font-size:14px
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 h6 {
 font-size:20px;
 font-weight:600;
@@ -89956,7 +89956,7 @@ margin-bottom:5px
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 h6
 a {
 color:#374151
@@ -89971,7 +89971,7 @@ color:#374151
 .listing-details
 .listing-profile-details
 .listing-user
-.listing-user-details
+.listing-users_details
 h6 {
 font-size:16px
 }
@@ -90826,32 +90826,32 @@ padding:15px;
 position:absolute
 }
 
-.main-wrapper.home-ten .faq-user .user-info {
+.main-wrapper.home-ten .faq-user .users_info {
 align-items:center;
 display:flex;
 flex-shrink:0;
 margin-right:50px
 }
 
-.main-wrapper.home-ten .faq-user .user-info span {
+.main-wrapper.home-ten .faq-user .users_info span {
 flex-shrink:0;
 margin-right:10px
 }
 
-.main-wrapper.home-ten .faq-user .user-info img {
+.main-wrapper.home-ten .faq-user .users_info img {
 border-radius:50%;
 height:48px;
 width:48px
 }
 
-.main-wrapper.home-ten .faq-user .user-info h6 {
+.main-wrapper.home-ten .faq-user .users_info h6 {
 color:#1f2937;
 font-size:18px;
 font-weight:600;
 margin-bottom:5px
 }
 
-.main-wrapper.home-ten .faq-user .user-info p {
+.main-wrapper.home-ten .faq-user .users_info p {
 color:#374151;
 font-size:12px;
 margin-bottom:0
@@ -94877,7 +94877,7 @@ font-size:17px
 .clients-section-fourteen
 .feedback-card
 .feedback-card-body
-.feedback-card-user-info
+.feedback-card-users_info
 h5 {
 color:#fff;
 margin-top:-60px
@@ -94888,7 +94888,7 @@ margin-top:-60px
 .clients-section-fourteen
 .feedback-card
 .feedback-card-body
-.feedback-card-user-info
+.feedback-card-users_info
 h5 {
 margin-top:0
 }
@@ -94898,7 +94898,7 @@ margin-top:0
 .clients-section-fourteen
 .feedback-card
 .feedback-card-body
-.feedback-card-user-info
+.feedback-card-users_info
 h5
 a {
 color:#fff;
@@ -94911,7 +94911,7 @@ margin-bottom:5px
 .clients-section-fourteen
 .feedback-card
 .feedback-card-body
-.feedback-card-user-info
+.feedback-card-users_info
 h5
 span {
 display:block;
@@ -95912,7 +95912,7 @@ width:100%
 .main-wrapper.home-twelve.home-thirteen
 .banner-section-thirteen
 .search-box-one.search-box-thirteen
-.search-input.search-users-line-thirteen {
+.search-input.search-users_line-thirteen {
 width:18%
 }
 
@@ -95920,7 +95920,7 @@ width:18%
 .main-wrapper.home-twelve.home-thirteen
 .banner-section-thirteen
 .search-box-one.search-box-thirteen
-.search-input.search-users-line-thirteen {
+.search-input.search-users_line-thirteen {
 width:100%
 }
 }
@@ -117801,7 +117801,7 @@ justify-content:space-between
 .appointment-wrap.appointment-grid-wrap
 > ul
 .appointment-grid-head
-.grid-user-msg {
+.grid-users_msg {
 align-items:center;
 border:1px solid #e2e8f0;
 border-radius:50%;
@@ -117815,7 +117815,7 @@ width:36px
 .appointment-wrap.appointment-grid-wrap
 > ul
 .appointment-grid-head
-.grid-user-msg
+.grid-users_msg
 .video-icon
 i {
 color:#6366f1
@@ -117824,7 +117824,7 @@ color:#6366f1
 .appointment-wrap.appointment-grid-wrap
 > ul
 .appointment-grid-head
-.grid-user-msg
+.grid-users_msg
 .hospital-icon
 i {
 color:#059669
@@ -117833,7 +117833,7 @@ color:#059669
 .appointment-wrap.appointment-grid-wrap
 > ul
 .appointment-grid-head
-.grid-user-msg
+.grid-users_msg
 .telephone-icon
 i {
 color:#3730a3
@@ -118979,20 +118979,20 @@ margin-right:10px;
 width:64px
 }
 
-.patient-wrap .patient-info .user-patient h6 {
+.patient-wrap .patient-info .users_patient h6 {
 color:#1d7ed8;
 font-size:12px;
 font-weight:500;
 margin-bottom:5px
 }
 
-.patient-wrap .patient-info .user-patient h5 {
+.patient-wrap .patient-info .users_patient h5 {
 color:#0f172a;
 font-weight:600;
 margin-bottom:5px
 }
 
-.patient-wrap .patient-info .user-patient ul li {
+.patient-wrap .patient-info .users_patient ul li {
 color:#334155;
 display:inline-block;
 font-size:12px;
@@ -119001,7 +119001,7 @@ padding:0 10px 0 0;
 position:relative
 }
 
-.patient-wrap .patient-info .user-patient ul li::before {
+.patient-wrap .patient-info .users_patient ul li::before {
 background:#e2e8f0;
 content:"";
 height:16px;
@@ -119012,12 +119012,12 @@ transform:translateY(-50%);
 width:1px
 }
 
-.patient-wrap .patient-info .user-patient ul li:last-child {
+.patient-wrap .patient-info .users_patient ul li:last-child {
 margin:0;
 padding:0
 }
 
-.patient-wrap .patient-info .user-patient ul li:last-child::before {
+.patient-wrap .patient-info .users_patient ul li:last-child::before {
 content:none
 }
 
@@ -119259,12 +119259,12 @@ color:#334155;
 font-weight:400
 }
 
-.appointment-tabs.user-tab {
+.appointment-tabs.users_tab {
 border-bottom:1px solid #e2e8f0;
 margin-bottom:24px
 }
 
-.appointment-tabs.user-tab ul {
+.appointment-tabs.users_tab ul {
 margin-bottom:4px
 }
 
@@ -119687,7 +119687,7 @@ font-size:12px;
 margin-bottom:0
 }
 
-.user-accordion-item {
+.users_accordion-item {
 background:#fff;
 border:1px solid #e2e8f0;
 border-radius:10px;
@@ -119695,7 +119695,7 @@ box-shadow:0 7.5px 17.5px 0 #0000000d;
 margin-bottom:24px
 }
 
-.user-accordion-item .accordion-wrap {
+.users_accordion-item .accordion-wrap {
 align-items:center;
 color:#0f172a;
 display:-webkit-box;
@@ -119706,18 +119706,18 @@ padding:24px 38px 24px 24px;
 position:relative
 }
 
-.user-accordion-item .accordion-wrap span {
+.users_accordion-item .accordion-wrap span {
 color:#e11d48;
 font-size:14px;
 font-weight:500;
 margin-right:8px
 }
 
-.user-accordion-item .accordion-wrap span.edit {
+.users_accordion-item .accordion-wrap span.edit {
 color:#18181b
 }
 
-.user-accordion-item .accordion-wrap::before {
+.users_accordion-item .accordion-wrap::before {
 content:"\f078";
 font-family:"font awesome 5 free";
 position:absolute;
@@ -119726,33 +119726,33 @@ top:50%;
 transform:translateY(-50%)
 }
 
-.user-accordion-item .accordion-wrap:not(.collapsed)::before {
+.users_accordion-item .accordion-wrap:not(.collapsed)::before {
 content:"\f077"
 }
 
-.user-accordion-item .accordion-wrap:hover {
+.users_accordion-item .accordion-wrap:hover {
 color:#2e3842
 }
 
-.user-accordion-item .accordion-wrap:hover::before {
+.users_accordion-item .accordion-wrap:hover::before {
 color:#2e3842
 }
 
-.user-accordion-item .content-collapse {
+.users_accordion-item .content-collapse {
 border-top:1px solid #e2e8f0;
 padding:24px
 }
 
-.user-accordion-item .accordion-collapse .form-wrap {
+.users_accordion-item .accordion-collapse .form-wrap {
 margin-bottom:24px
 }
 
-.user-accordion-item .accordion-collapse .form-wrap.mb-wrap {
+.users_accordion-item .accordion-collapse .form-wrap.mb-wrap {
 margin-bottom:0
 }
 
 @media (max-width: 767.98px) {
-.user-accordion-item .accordion-collapse .form-wrap.mb-wrap {
+.users_accordion-item .accordion-collapse .form-wrap.mb-wrap {
 margin-bottom:24px
 }
 }
@@ -120124,12 +120124,12 @@ top:50%;
 transform:translateY(-50%)
 }
 
-.user-accordion-item .reset {
+.users_accordion-item .reset {
 color:#e11d48;
 margin-bottom:0
 }
 
-.user-accordion-item .form-check-label {
+.users_accordion-item .form-check-label {
 color:#1f2937
 }
 
@@ -120215,7 +120215,7 @@ margin-right:10px
 .appointment-wrap.appointment-grid-wrap
 > ul
 .appointment-grid-head
-.grid-user-msg
+.grid-users_msg
 .hospital-icon
 i {
 color:#7c3aed
@@ -121593,7 +121593,7 @@ height:18px;
 width:18px
 }
 
-.user-video {
+.users_video {
 bottom:0;
 left:0;
 overflow:auto;
@@ -121603,7 +121603,7 @@ top:0;
 z-index:10
 }
 
-.user-video img {
+.users_video img {
 display:block;
 height:auto;
 margin:0 auto;
@@ -121612,7 +121612,7 @@ max-width:100%;
 width:auto
 }
 
-.user-video video {
+.users_video video {
 display:block;
 height:auto;
 margin:0 auto;
@@ -121715,7 +121715,7 @@ margin-left:10px;
 width:100%
 }
 
-.call-user-details,.call-timing {
+.call-users_details,.call-timing {
 display:block;
 overflow:hidden;
 text-overflow:ellipsis;

@@ -1,0 +1,7 @@
+CREATE TABLE contracts (
+    contracts_id INT AUTO_INCREMENT PRIMARY KEY,
+    contracts_name VARCHAR(255) NOT NULL,
+    contracts_description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

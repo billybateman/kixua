@@ -64,7 +64,7 @@
                                  }
                                  ?>
                                  <div class="gen-account-holder">
-                                    <a href="javascript:void(0)" id="gen-user-btn">
+                                    <a href="javascript:void(0)" id="gen-users_btn">
                                     <?php
                                     if($profile_image != ""){ 
                                     ?><img class="rounded-circle header-profile-user" src="<?php echo $profile_image; ?>"

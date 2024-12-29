@@ -62,11 +62,11 @@ function choose_handler(): callable
 }
 
 /**
- * Get the default User-Agent string to use with Guzzle.
+ * Get the default users_Agent string to use with Guzzle.
  *
- * @deprecated default_user_agent will be removed in guzzlehttp/guzzle:8.0. Use Utils::defaultUserAgent instead.
+ * @deprecated default_users_agent will be removed in guzzlehttp/guzzle:8.0. Use Utils::defaultUserAgent instead.
  */
-function default_user_agent(): string
+function default_users_agent(): string
 {
     return Utils::defaultUserAgent();
 }

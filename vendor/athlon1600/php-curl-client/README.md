@@ -50,7 +50,7 @@ or you can issue a completely customized request:
 
 ```php
 $client->request('GET', 'https://www.whatismyip.com/', null, [
-    'User-Agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X)'
+    'users_Agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X)'
 ], [
     CURLOPT_PROXY => '127.0.0.1:8080',
     CURLOPT_TIMEOUT => 10

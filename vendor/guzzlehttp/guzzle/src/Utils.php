@@ -109,7 +109,7 @@ final class Utils
     }
 
     /**
-     * Get the default User-Agent string to use with Guzzle.
+     * Get the default users_Agent string to use with Guzzle.
      */
     public static function defaultUserAgent(): string
     {

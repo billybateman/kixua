@@ -143,6 +143,25 @@ function stripSlashesDeep($value)
     return is_array($value) ? array_map('stripSlashesDeep', $value) : stripslashes($value);
 }
 
+
+function send_email ($to_email, $from_email, $from_name, $subject, $msg) {
+    //split up to email array, if given
+    if (is_array($to_email)) {
+        $to_email_string = implode(', ', $to_email);
+    }
+    else {
+        $to_email_string = $to_email;
+    }
+  
+    //Assemble headers
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= "From: $from_name <$from_email>" . "\r\n";
+  
+    //send via PHP's mail() function
+    mail($to_email_string, $subject, $msg, $headers);
+}
+
 function removeMagicQuotes()
 {
     $_GET = stripSlashesDeep($_GET);

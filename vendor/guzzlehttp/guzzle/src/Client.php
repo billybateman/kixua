@@ -261,17 +261,17 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
             $this->config['cookies'] = new CookieJar();
         }
 
-        // Add the default user-agent header.
+        // Add the default users_agent header.
         if (!isset($this->config['headers'])) {
-            $this->config['headers'] = ['User-Agent' => Utils::defaultUserAgent()];
+            $this->config['headers'] = ['users_Agent' => Utils::defaultUserAgent()];
         } else {
-            // Add the User-Agent header if one was not already set.
+            // Add the users_Agent header if one was not already set.
             foreach (\array_keys($this->config['headers']) as $name) {
-                if (\strtolower($name) === 'user-agent') {
+                if (\strtolower($name) === 'users_agent') {
                     return;
                 }
             }
-            $this->config['headers']['User-Agent'] = Utils::defaultUserAgent();
+            $this->config['headers']['users_Agent'] = Utils::defaultUserAgent();
         }
     }
 

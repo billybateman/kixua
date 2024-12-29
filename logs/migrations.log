@@ -111,3 +111,208 @@ CREATE TABLE backups (
     filename VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ); processed at 2024-12-25 00:53:06
+Filename:init_create_clients.php Query:CREATE TABLE clients (
+    clients_id INT AUTO_INCREMENT PRIMARY KEY,
+    clients_name VARCHAR(255) NOT NULL,
+    clients_email VARCHAR(255) NOT NULL UNIQUE,
+    clients_phone VARCHAR(20),
+    clients_address TEXT,
+    clients_company VARCHAR(255),
+    clients_tax_number VARCHAR(50),
+    clients_status ENUM('active', 'inactive') DEFAULT 'active',
+    clients_notes TEXT,
+    clients_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    clients_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`clients_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_customers.php Query:CREATE TABLE customers (
+    customers_id INT AUTO_INCREMENT PRIMARY KEY,
+    customers_name VARCHAR(255) NOT NULL,
+    customers_email VARCHAR(255) NOT NULL,
+    customers_phone VARCHAR(20),
+    customers_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    customers_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`customers_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_invoices.php Query:CREATE TABLE invoices (
+    invoices_id INT AUTO_INCREMENT PRIMARY KEY,
+    invoices_customer_id INT NOT NULL,
+    invoices_amount DECIMAL(10, 2) NOT NULL,
+    invoices_due_date DATE NOT NULL,
+    invoices_status VARCHAR(50) NOT NULL,
+    invoices_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    invoices_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `invoices`
+  ADD PRIMARY KEY (`invoices_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_payments.php Query:CREATE TABLE payments (
+    payments_id INT AUTO_INCREMENT PRIMARY KEY,
+    payments_invoices_id INT NOT NULL,
+    payments_amount DECIMAL(10, 2) NOT NULL,
+    payments_payment_date DATE NOT NULL,
+    payments_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payments_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`payments_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_products.php Query:CREATE TABLE products (
+    products_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    products_name VARCHAR(255) NOT NULL,
+    products_description TEXT NOT NULL,
+    products_price DECIMAL(8, 2) NOT NULL,
+    products_created_at TIMESTAMP NULL,
+    products_updated_at TIMESTAMP NULL
+)
+
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`products_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_services.php Query:CREATE TABLE services (
+    services_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    services_name VARCHAR(255) NOT NULL,
+    services_description TEXT NOT NULL,
+    services_price DECIMAL(8, 2) NOT NULL,
+    services_created_at TIMESTAMP NULL,
+    services_updated_at TIMESTAMP NULL
+)
+
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`services_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_subscriptions.php Query:CREATE TABLE subscriptions (
+    subscriptions_id INT AUTO_INCREMENT PRIMARY KEY,
+    subscriptions_customers_id INT NOT NULL,
+    subscriptions_plan VARCHAR(255) NOT NULL,
+    subscriptions_start_date DATE NOT NULL,
+    subscriptions_end_date DATE,
+    subscriptions_status VARCHAR(50) NOT NULL,
+    subscriptions_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    subscriptions_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE `subscriptions`
+  ADD PRIMARY KEY (`subscriptions_id`); processed at 2024-12-27 00:40:38
+Filename:init_create_clients.php Query:CREATE TABLE clients (
+    clients_id INT AUTO_INCREMENT PRIMARY KEY,
+    clients_name VARCHAR(255) NOT NULL,
+    clients_email VARCHAR(255) NOT NULL UNIQUE,
+    clients_phone VARCHAR(20),
+    clients_address TEXT,
+    clients_company VARCHAR(255),
+    clients_tax_number VARCHAR(50),
+    clients_status ENUM('active', 'inactive') DEFAULT 'active',
+    clients_notes TEXT,
+    clients_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    clients_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); processed at 2024-12-27 00:56:13
+Filename:init_create_customers.php Query:CREATE TABLE customers (
+    customers_id INT AUTO_INCREMENT PRIMARY KEY,
+    customers_name VARCHAR(255) NOT NULL,
+    customers_email VARCHAR(255) NOT NULL,
+    customers_phone VARCHAR(20),
+    customers_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    customers_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); processed at 2024-12-27 00:56:13
+Filename:init_create_invoices.php Query:CREATE TABLE invoices (
+    invoices_id INT AUTO_INCREMENT PRIMARY KEY,
+    invoices_customer_id INT NOT NULL,
+    invoices_amount DECIMAL(10, 2) NOT NULL,
+    invoices_due_date DATE NOT NULL,
+    invoices_status VARCHAR(50) NOT NULL,
+    invoices_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    invoices_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); processed at 2024-12-27 00:56:13
+Filename:init_create_payments.php Query:CREATE TABLE payments (
+    payments_id INT AUTO_INCREMENT PRIMARY KEY,
+    payments_invoices_id INT NOT NULL,
+    payments_amount DECIMAL(10, 2) NOT NULL,
+    payments_payment_date DATE NOT NULL,
+    payments_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payments_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); processed at 2024-12-27 00:56:13
+Filename:init_create_products.php Query:CREATE TABLE products (
+    products_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    products_name VARCHAR(255) NOT NULL,
+    products_description TEXT NOT NULL,
+    products_price DECIMAL(8, 2) NOT NULL,
+    products_created_at TIMESTAMP NULL,
+    products_updated_at TIMESTAMP NULL
+); processed at 2024-12-27 00:56:13
+Filename:init_create_services.php Query:CREATE TABLE services (
+    services_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    services_name VARCHAR(255) NOT NULL,
+    services_description TEXT NOT NULL,
+    services_price DECIMAL(8, 2) NOT NULL,
+    services_created_at TIMESTAMP NULL,
+    services_updated_at TIMESTAMP NULL
+); processed at 2024-12-27 00:56:13
+Filename:init_create_subscriptions.php Query:CREATE TABLE subscriptions (
+    subscriptions_id INT AUTO_INCREMENT PRIMARY KEY,
+    subscriptions_customers_id INT NOT NULL,
+    subscriptions_plan VARCHAR(255) NOT NULL,
+    subscriptions_start_date DATE NOT NULL,
+    subscriptions_end_date DATE,
+    subscriptions_status VARCHAR(50) NOT NULL,
+    subscriptions_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    subscriptions_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); processed at 2024-12-27 00:56:13
+Filename:2023_0000_forms.php Query:CREATE TABLE forms (
+    form_id INT AUTO_INCREMENT PRIMARY KEY,
+    form_name VARCHAR(255) NOT NULL,
+    form_description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ processed at 2024-12-27 05:36:50
+Filename:2023_0000_contracts.php Query:CREATE TABLE contracts (
+    contracts_id INT AUTO_INCREMENT PRIMARY KEY,
+    contracts_name VARCHAR(255) NOT NULL,
+    contracts_description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ processed at 2024-12-27 07:39:54
+Filename:2023_0000_profile.php Query:CREATE TABLE profiles (
+    profile_id INT AUTO_INCREMENT PRIMARY KEY,
+    users_id INT NOT NULL,
+    bio VARCHAR(255) NULL,
+    website VARCHAR(255) NULL,
+    twitter_handle VARCHAR(255) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (users_id) REFERENCES users(users_id) ON DELETE CASCADE
+); processed at 2024-12-27 11:18:39
+Filename:2023_10_10_0001_create_projects_table.php Query:CREATE TABLE projects (
+    projects_id INT AUTO_INCREMENT PRIMARY KEY,
+    projects_name VARCHAR(255) NOT NULL,
+    projects_details TEXT,
+    projects_status VARCHAR(50),
+    projects_due_date DATE,
+    projects_managers_users_id INT,
+    projects_progress_percent INT,
+    projects_priority VARCHAR(50),
+    projects_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    projects_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ processed at 2024-12-28 21:09:49
+Filename:2023_10_10_0002_create_tasks_table.php Query:CREATE TABLE tasks (
+    tasks_id INT AUTO_INCREMENT PRIMARY KEY,
+    tasks_name VARCHAR(255) NOT NULL,
+    tasks_description TEXT,
+    tasks_projects_id INT,
+    tasks_users_id INT,
+    tasks_due_date DATE,
+    tasks_status VARCHAR(50),
+    tasks_progress INT,
+    tasks_is_child BOOLEAN DEFAULT FALSE,
+    tasks_parent_tasks_id INT DEFAULT NULL,
+    tasks_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    tasks_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (tasks_projects_id) REFERENCES projects(projects_id) ON DELETE CASCADE,
+    FOREIGN KEY (tasks_parent_tasks_id) REFERENCES tasks(tasks_id) ON DELETE SET NULL
+);
+ processed at 2024-12-28 21:09:49

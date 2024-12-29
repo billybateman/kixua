@@ -38,11 +38,11 @@
                         <form name="pms_login" id="pms_login" action="/login" method="post">
                             <h4>Sign In</h4>
                             <p class="login-username">
-                                <label for="user_login">Email Address</label>
+                                <label for="users_login">Email Address</label>
                                 <input type="text" name="email" id="email" class="input" value="" size="20" required>
                             </p>
                             <p class="login-password">
-                                <label for="user_pass">Password</label>
+                                <label for="users_pass">Password</label>
                                 <input type="password" name="password" id="password" class="input" value="" size="20" required>
                             </p>
                             <p class="login-remember">

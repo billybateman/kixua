@@ -16,7 +16,7 @@ if (PHP_VERSION_ID < 50600) {
     }
     trigger_error(
         $err,
-        E_USER_ERROR
+        E_users_ERROR
     );
 }
 

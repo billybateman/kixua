@@ -158,7 +158,7 @@ var FormatOptions = [
 			output += suffix;
 		}
 
-		// Run the output through a user-specified post-formatter.
+		// Run the output through a users_specified post-formatter.
 		if ( edit ) {
 			output = edit ( output, originalInput );
 		}
@@ -235,7 +235,7 @@ var FormatOptions = [
 		// Covert to number.
 		output = Number(output);
 
-		// Run the user-specified post-decoder.
+		// Run the users_specified post-decoder.
 		if ( decoder ) {
 			output = decoder(output);
 		}

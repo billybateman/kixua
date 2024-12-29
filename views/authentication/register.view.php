@@ -39,19 +39,19 @@
                         <form name="pms_login" id="pms_login" role="form" action="/register">
                         <h4>Register</h4>
                             <p class="login-username">
-                                <label for="user_login">Name</label>
+                                <label for="users_login">Name</label>
                                 <input type="text" name="name" id="email" class="input" value="" size="20" required>
                             </p>
                             <p class="login-username">
-                                <label for="user_login">Email Address</label>
+                                <label for="users_login">Email Address</label>
                                 <input type="text" name="email" id="email" class="input" value="" size="20" required>
                             </p>
                             <p class="login-password">
-                                <label for="user_pass">Password</label>
+                                <label for="users_pass">Password</label>
                                 <input type="password" name="password" id="password" class="input" value="" size="20" required>
                             </p>
                             <p class="login-password">
-                                <label for="user_pass">Re-Type Password</label>
+                                <label for="users_pass">Re-Type Password</label>
                                 <input type="password" name="password2" id="password" class="input" value="" size="20" required>
                             </p>
 

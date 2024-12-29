@@ -1,0 +1,26 @@
+Create an bootstrap admin panel similair to https://nextjs.spruko.com/bootstrap/app/xintra-ts/preview/apps/projects/projects-list/ with main features being a built in IDE with file manager and an  AI prompt conversation/code builder tool. Other features include File Manager in IDE
+A feature to upload, download, and manage files within the admin tool with ability to check out, commit, and push to git repos.
+Migrations Manager
+Tool to handle database migrations for version control and schema changes.
+MODERATE
+Third Party API Integrations
+Ability to connect and integrate with third-party APIs for extended functionality
+Web Hooks
+Feature to set up and manage webhooks for real-time communication with external services
+Cron Manager
+Tool to schedule and manage cron jobs for automated tasks within the admin tool.
+MODERATE
+User Manager
+Functionality to manage user roles, accounts, profiles, and system access/permissions
+Roles Manager
+Feature to assign and manage roles for users with different levels of access and...
+MODERATE
+Permissions Manager
+Tool to define and control granular permissions for users and roles within the system. Built-in IDE
+Integrated Development Environment for writing, editing, and managing PHP all files and code in the system
+DB Manager
+Database management tool to view, edit, and manage the mysql database
+Built-in AI Prompt Assistant
+AI-powered assistant to provide suggestions and guidance for managing all features of system, want it to generate code based on the current codebase and basically contribute or streamline the creation of new controllers, migrations, models, helpers, libraries/class, and views.
+Time Clock and Activity Monitoring
+Functionality to monitor user activity, track time spent on tasks, and generate payroll reports and data on a recurring time frame. Need the html5 non back end files, and if backend creation is possible here, need it written in PHP using the kixua framework https://github.com/billybateman/kixua

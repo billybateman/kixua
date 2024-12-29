@@ -97,6 +97,52 @@ class usersmodel
     }
     
 
+
+
+	function search($q)
+    {
+       
+        //prepare query
+        $this->db->prepare
+        (
+                "
+                SELECT
+                        *
+                FROM
+                        `$this->table`
+				JOIN
+						`users_types`
+				ON
+						`users`.`users_types_id` = `users_types`.`users_types_id`
+				LEFT JOIN
+							`images`
+					ON
+							`users`.`users_images_id` = `images`.`images_id`
+                WHERE
+						`users_first_name` LIKE '%$q%' OR `users_last_name` LIKE '%$q%' OR `users_email` LIKE '%$q%' OR `users_phone` LIKE '%$q%'
+
+                ORDER BY
+                        `users_id` DESC
+
+                
+                        
+                ;
+                "
+        );
+
+		
+
+        //execute query
+        $this->db->query();		
+        $result = $this->db->fetchAll('array');
+		if(is_array($result)){
+			return $result;
+		} else {
+				return array();
+		}
+    }
+
+
 	/**
 	 * Fetches user based on supplied id
 	 * 
@@ -105,7 +151,7 @@ class usersmodel
 	 * @return array $user
 	 */
 	
-	public function get_user_by_email($email)
+	public function get_users_by_email($email)
 	{		
 			
 		//sanitize data
@@ -186,7 +232,8 @@ class usersmodel
 		
 		//execute query
 		$this->db->query();		
-		$user = $this->db->fetch('array');		
+		$user = $this->db->fetch('array');
+		
 		return $user;
 	}
         
@@ -395,7 +442,7 @@ class usersmodel
             
 		$md5_password = md5($password);
 
-		$exist = $this->get_user_by_email($email);
+		$exist = $this->get_users_by_email($email);
 		
 		if($exist == 0){
                	
@@ -448,7 +495,7 @@ class usersmodel
 		$password = $data['users_password'];
 		$data['users_password'] = md5($data['users_password']);
  
-		$exist = $this->get_user_by_email($email);
+		$exist = $this->get_users_by_email($email);
 		 
 		 if($exist == 0){
 

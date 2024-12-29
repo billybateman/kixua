@@ -32,7 +32,11 @@ class invoices_model
         }
         $sql = "SELECT * FROM $this->table $where LIMIT $start, $per_page ORDER BY $this->table_id DESC";
         $this->db->prepare($sql);
-        return $this->db->query()->fetchAll();
+        $this->db->query();
+
+        $results = $this->db->fetchAll('array');
+
+        return $results;
     }
 
     function create($data){

@@ -77,6 +77,7 @@ class SystemController extends BaseController
 
     public function migrations()
     {
+
         $this->registry->migrationsModel = new MigrationsModel($this->registry);
         $migrationsDir = __APP_PATH . '/migrations';
         
@@ -88,7 +89,7 @@ class SystemController extends BaseController
                         break;
                     case 'run':
                         $logFile = __APP_PATH . '/logs/migrations.log';
-                        $migrations = array_diff(scandir($migrationsDir), array('..', '.','processed', 'default_migration.migration.php'));
+                        $migrations = array_diff(scandir($migrationsDir), array('..', '.','processed', 'default_migration.migration.php', '.DS_Store'));
                         
                         $new_models = array();
 
@@ -111,8 +112,7 @@ class SystemController extends BaseController
                             rename($migrationFile, __APP_PATH . '/migrations/processed/' . $migration);
                         }
 
-                        $ConfigHelper = $this->registry->Confighelper;
-                        $ConfigHelper->updateConfigModels($new_models);
+                        $this->registry->confighelper->updateConfigModels($new_models);
 
                         
                         $toaster = array('title' => 'Migrations', 'message' => 'Migrations processed successfully');
@@ -120,7 +120,7 @@ class SystemController extends BaseController
                        
                     break;
                     case 'createModels':
-                        $migrations = array_diff(scandir($migrationsDir), array('..', '.', 'processed','default_migration.migration.php'));
+                        $migrations = array_diff(scandir($migrationsDir), array('..', '.', 'processed','default_migration.migration.php', '.DS_Store'));
                         $new_models = array();
                         
                         foreach ($migrations as $migration) {
@@ -140,8 +140,8 @@ class SystemController extends BaseController
                             file_put_contents($modelFile, $modelContent);
                         }
 
-                        $ConfigHelper = $this->registry->Confighelper;
-                        $ConfigHelper->updateConfigModels($new_models);
+                        $this->registry->confighelper->updateConfigModels($new_models);
+                       
 
                         // Get current models
                         $current_models = ConfigHelper::getCurrentModels();
@@ -167,7 +167,7 @@ class SystemController extends BaseController
             }
         }
 
-        $migrations = array_diff(scandir($migrationsDir), array('..', '.','processed','default_migration.migration.php'));
+        $migrations = array_diff(scandir($migrationsDir), array('..', '.','processed','default_migration.migration.php', '.DS_Store'));
         $this->registry->template->migrations = $migrations;
         $this->registry->template->show('admin/system/migrations/browse.view.php');
     }

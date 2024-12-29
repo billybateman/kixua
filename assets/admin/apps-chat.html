@@ -1,8 +1,8 @@
 
 <div class="container-fluid">
 
-    <!-- start page title -->
-    <div class="row">
+    <!-- start page title 
+    <div class="row d-none">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
                 <h4 class="mb-0">Chat</h4>
@@ -17,38 +17,12 @@
             </div>
         </div>
     </div>
-    <!-- end page title -->
+    end page title -->
 
     <div class="d-lg-flex mb-4">
-        <div class="card border-end shadow-none rounded-0 chat-leftsidebar mb-0">
+        <div class="card border-end shadow-none rounded-0 chat-leftsidebar mb-0 chat-offset-left">
             <div class="p-4 pb-0">
-                <div class="d-flex align-items-center">
-                    <div class="d-inline-block position-relative flex-shrink-0">
-                        <div class="chat-user-img online">
-                            <img src="assets/images/users/avatar-10.jpg"
-                                class="img-thumbnail avatar rounded-circle img-fluid" alt="">
-                            <span class="user-status"></span>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5 class="font-size-16 mb-1">Jansh Wells</h5>
-                        <a href="javascript:void(0);" class="text-muted mb-0 font-size-13">Janshwells@probic.com</a>
-                    </div>
-                    <div class="dropdown">
-                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true">
-                            <i class="mdi mdi-dots-vertical"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item text-muted fw-medium" href="apps-chat.html#"><i
-                                    class="mdi mdi-account-outline me-2"></i>Profile</a>
-                            <a class="dropdown-item text-muted fw-medium" href="apps-chat.html#"><i
-                                    class="mdi mdi-clipboard-edit-outline me-2"></i>Edit</a>
-                            <a class="dropdown-item text-muted fw-medium" href="apps-chat.html#"><i
-                                    class="mdi mdi-cog me-2"></i>Settings</a>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="search-box py-4">
                     <div class="position-relative">
                         <input type="text" class="form-control rounded" id="search-chat" onkeyup="searchChat()" placeholder="Search...">
@@ -57,7 +31,7 @@
                 </div><!-- end search box -->
             </div><!-- end card body -->
             <div class="pb-4" id="all-chat">
-                <div class="px-3" data-simplebar style="max-height: 564px;">
+                <div class="px-3" data-simplebar="init" style="max-height: 564px;"><div class="simplebar-wrapper" style="margin: 0px -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: -15px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px 16px;">
                     <div class="information-box chat-item-box">
                         <h6 class="text-uppercase mb-3 mt-1 font-size-13">informations</h6>
                         <ul class="list-unstyled chat-list group-chat">
@@ -96,8 +70,7 @@
                         <div class="float-end">
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-transparent fs-5 rounded">
-                                    <a href="apps-chat.html#" class="text-secondary" data-bs-toggle="modal"
-                                        data-bs-target=".create-new-groups"><i class="mdi mdi-plus"></i></a>
+                                    <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target=".create-new-groups"><i class="mdi mdi-plus"></i></a>
                                 </span>
                             </div>
                         </div>
@@ -176,12 +149,11 @@
                         </ul><!-- end ul -->
                     </div><!-- end -->
 
-                    <div class="user-box chat-list-box">
+                    <div class="users_box chat-list-box">
                         <div class="float-end">
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-transparent fs-5 text-secondary rounded">
-                                    <a href="apps-chat.html#" class="text-secondary" data-bs-toggle="modal"
-                                        data-bs-target=".direct-new-message"><i class="mdi mdi-plus"></i></a>
+                                    <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target=".direct-new-message"><i class="mdi mdi-plus"></i></a>
                                 </span>
                             </div>
                         </div>
@@ -191,10 +163,9 @@
                             <li>
                                 <a href="javascript: void(0);" class="fw-medium d-block">
                                     <div class="d-flex align-items-center">
-                                        <div class="chat-user-img online flex-shrink-0">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="img-fluid avatar-sm rounded-circle" alt="">
-                                            <span class="user-status"></span>
+                                        <div class="chat-users_img online flex-shrink-0">
+                                            <img src="assets/images/users/avatar-2.jpg" class="img-fluid avatar-sm rounded-circle" alt="">
+                                            <span class="users_status"></span>
                                         </div>
                                         <div class="ms-3 chat-text">
                                             Denny Silva
@@ -205,10 +176,9 @@
                             <li>
                                 <a href="javascript: void(0);" class="fw-medium d-block">
                                     <div class="d-flex align-items-center">
-                                        <div class="chat-user-img online">
-                                            <img src="assets/images/users/avatar-1.jpg"
-                                                class="img-fluid avatar-sm rounded-circle" alt="">
-                                            <span class="user-status"></span>
+                                        <div class="chat-users_img online">
+                                            <img src="assets/images/users/avatar-1.jpg" class="img-fluid avatar-sm rounded-circle" alt="">
+                                            <span class="users_status"></span>
                                         </div>
                                         <div class="ms-3 chat-text">
                                             Jenny Morrow    
@@ -219,10 +189,9 @@
                             <li>
                                 <a href="javascript: void(0);" class="fw-medium  d-block">
                                     <div class="d-flex align-items-center">
-                                        <div class="chat-user-img online">
-                                            <img src="assets/images/users/avatar-6.jpg"
-                                                class="img-fluid avatar-sm rounded-circle" alt="">
-                                            <span class="user-status"></span>
+                                        <div class="chat-users_img online">
+                                            <img src="assets/images/users/avatar-6.jpg" class="img-fluid avatar-sm rounded-circle" alt="">
+                                            <span class="users_status"></span>
                                         </div>
                                         <div class="ms-3 chat-text">
                                             Ayan Owen
@@ -233,10 +202,9 @@
                             <li>
                                 <a href="javascript: void(0);" class="fw-medium d-block">
                                     <div class="d-flex align-items-center">
-                                        <div class="chat-user-img online">
-                                            <img src="assets/images/users/avatar-8.jpg"
-                                                class="img-fluid avatar-sm rounded-circle" alt="">
-                                            <span class="user-status"></span>
+                                        <div class="chat-users_img online">
+                                            <img src="assets/images/users/avatar-8.jpg" class="img-fluid avatar-sm rounded-circle" alt="">
+                                            <span class="users_status"></span>
                                         </div>
                                         <div class="ms-3 chat-text">
                                             Romi Miller
@@ -246,68 +214,42 @@
                             </li><!-- end li -->
                         </ul><!-- end ul -->
                     </div><!-- end -->
-                </div>
+                </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 557px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none; width: 145px;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 557px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
             </div>
         </div><!-- end card -->
 
         <!-- Group Chat -->
-        <div id="group-chat-conversation" class="w-100 user-chat mt-4 mt-lg-0">
+        <div id="group-chat-conversation" class="w-100 users_chat mt-4 mt-lg-0 ">
             <div class="card rounded-0 shadow-none mb-0">
                 <div class="p-3 border-bottom">
                     <div class="row">
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar-sm">
-                                    <span class="avatar-title bg-light text-muted font-size-16 rounded-circle avatar-icon">
-                                        #
-                                    </span>
-                                </div>
-                                <div class="ms-3">
-                                    <h5 class="mb-0"><div class="chat-title-text">Welcome</div></h5>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- end col -->
-                        <div class="col-md-7">
-                            <div class="d-flex flex-wrap justify-content-sm-end align-items-center mt-4 mt-md-0"
-                                data-bs-toggle="modal" data-bs-target=".groups-details">
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap justify-content-sm-start align-items-center mt-2 ml-4" data-bs-toggle="modal" data-bs-target=".groups-details">
                                 <div class="avatar-group">
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Julia Halsey">
-                                            <img src="assets/images/users/avatar-1.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Julia Halsey">
+                                            <img src="assets/images/users/avatar-1.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Mark Burke">
-                                            <img src="assets/images/users/avatar-2.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark Burke">
+                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Siya Hudda">
-                                            <img src="assets/images/users/avatar-3.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Siya Hudda">
+                                            <img src="assets/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Mary Evans">
-                                            <img src="assets/images/users/avatar-4.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Mary Evans">
+                                            <img src="assets/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Jansh Ott">
+                                        <a href="javascript: void(0);" class="d-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Jansh Ott">
                                             <div class="avatar-sm">
                                                 <div class="avatar-title rounded-circle bg-purple">
                                                     J
@@ -316,19 +258,13 @@
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Max Cole">
-                                            <img src="assets/images/users/avatar-5.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Max Cole">
+                                            <img src="assets/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
-                                        <a href="javascript: void(0);" class="d-inline-block"
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Ayaan Curry">
-                                            <img src="assets/images/users/avatar-2.jpg" alt=""
-                                                class="rounded-circle avatar-sm">
+                                        <a href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Ayaan Curry">
+                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-sm">
                                         </a>
                                     </div>
                                     <div class="avatar-group-item">
@@ -347,7 +283,7 @@
                 </div>
 
                 <div>
-                    <div class="chat-conversation py-3" id="chat-conversation" data-simplebar style="max-height: 602px;">
+                    <div class="chat-conversation py-3 chat-offset" id="chat-conversation" data-simplebar="init" style="max-height: 602px;"><div class="simplebar-wrapper" style="margin: -16px 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: -15px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 16px 0px;">
                         <ul class="list-unstyled mb-0 px-3 chat-conversation-list" id="chat-conversation-list">
                             <li class="chat-list">
                                 <div class="chat-day-title mt-2">
@@ -359,8 +295,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -368,28 +303,16 @@
                                                     <p class="mb-0"> Good morning</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -405,8 +328,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-5.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-5.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -414,28 +336,16 @@
                                                     <p class="mb-0"> Good morning everyone !</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -451,8 +361,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-1.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-1.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -460,28 +369,16 @@
                                                     <p class="mb-0">Good morning.. Have a nice day.</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -497,8 +394,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -506,9 +402,7 @@
                                                     <p class="mb-0">Good morning, How are you? What about our next meeting?</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
@@ -539,44 +433,30 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
                                                 <div class="ctext-wrap">
-                                                    <p class="mb-0">Yeah.. I'm good & Next meeting tomorrow
+                                                    <p class="mb-0">Yeah.. I'm good &amp; Next meeting tomorrow
                                                         02.00 pm</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Denny Silva <small
-                                                    class="chat-time text-muted fw-medium">10:18 am</small>
+                                                Denny Silva <small class="chat-time text-muted fw-medium">10:18 am</small>
                                             </div>
                                         </div>
                                     </div>
@@ -587,8 +467,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-8.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-8.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -596,23 +475,16 @@
                                                     <p class="mb-0">Okay !!</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -628,8 +500,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -637,9 +508,7 @@
                                                     <p class="mb-0">Okay.. Good</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
@@ -669,8 +538,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-4.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-4.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -694,28 +562,16 @@
                                                     </ul><!-- end ul -->
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -731,8 +587,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-6.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-6.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -753,36 +608,22 @@
                                                                 </div>
                                                             </div>
                                                             <div class="ms-5">
-                                                                <a href="apps-chat.html#" data-bs-toggle="tooltip"
-                                                                    data-bs-placement="top" title="Download"><i
-                                                                        class="mdi mdi-download text-muted fs-5"></i></a>
+                                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="mdi mdi-download text-muted fs-5"></i></a>
                                                             </div>
                                                         </div>
                                                     </div><!-- end card -->
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -804,8 +645,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -813,28 +653,16 @@
                                                     <p class="mb-0">Hello.. good morning</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                    <div class="dropdown-menu" style="">
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -850,8 +678,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -871,20 +698,17 @@
                                                                 </div>
                                                             </div>
                                                             <div class="ms-5">
-                                                                <a href="apps-chat.html#" data-bs-toggle="tooltip"
-                                                                    data-bs-placement="top" title="Download">
+                                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Download">
                                                                     <i class="mdi mdi-download text-muted fs-5"></i></a>
                                                             </div>
                                                         </div>
                                                     </div><!-- end card -->
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
-                                                    <div class="dropdown-menu">
+                                                    <div class="dropdown-menu" style="">
                                                         <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                             <i class="mdi mdi-content-copy me-2"></i>Copy</a>
                                                         <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
@@ -912,8 +736,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -921,28 +744,16 @@
                                                     <p class="mb-0">Very good morning</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -958,8 +769,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-4.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-4.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -967,28 +777,16 @@
                                                     <p class="mb-0">Hey ! How are you?</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1000,19 +798,17 @@
                                 </div><!-- end conversation list -->
                             </li><!-- end li -->
                         </ul><!-- end ul -->
-                    </div>
+                    </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 1431px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 184px; transform: translate3d(0px, 303px, 0px); display: block;"></div></div></div>
 
                     <div class="p-3 chat-input-section">
                         <form class="chatinput-form" data-id="chat-conversation-list">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="bx bx-plus fs-3"></i>
                                         </a>
-                                        <div class="dropdown-menu">
+                                        <div class="dropdown-menu" style="">
                                             <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                 <i class="mdi mdi-camera-outline me-2"></i>Camera</a>
                                             <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
@@ -1028,8 +824,7 @@
                                 </div><!-- end col -->
                                 <div class="col">
                                     <div class="position-relative">
-                                        <input type="text" class="form-control chat-input task-comment" id="chat-input"
-                                            placeholder="Type your message here...">
+                                        <input type="text" class="form-control chat-input task-comment" id="chat-input" placeholder="Type your message here...">
                                         <div class="chat-input-links" id="tooltip-container">
                                             <ul class="list-inline mb-0">
                                                 <li class="list-inline-item"><a href="javascript: void(0);" title="Emoji">
@@ -1041,8 +836,8 @@
                                 <div class="col-auto">
                                     <div class="d-flex gap-3">
                                         <i class="mdi mdi-microphone fs-3 text-muted align-middle"></i>
-                                        <button type="submit" class="btn btn-primary btn-rounded shadow-none chat-send">
-                                            <i class="mdi mdi-send send-task-comment"></i></button>
+                                        <a href="javascript:void(0);" class="btn btn-primary btn-rounded shadow-none chat-send">
+                                            <i class="mdi mdi-send send-task-comment"></i></a>
                                     </div>
                                 </div><!-- end col -->
                             </div><!-- end row -->
@@ -1053,14 +848,13 @@
         </div><!-- end user chat -->
 
         <!-- Direct Massage -->
-        <div id="user-chat-conversation" class="w-100 user-chat mt-4 mt-lg-0 d-none">
+        <div id="users_chat-conversation" class="w-100 users_chat mt-4 mt-lg-0 d-none">
             <div class="card rounded-0 shadow-none mb-0">
                 <div class="p-3 border-bottom">
                     <div class="row">
                         <div class="col-md-5">
                             <div class="d-flex align-items-center">
-                                <img src="assets/images/users/avatar-2.jpg"
-                                    class="avatar-sm rounded-circle img-fluid single-chat-img" alt="">
+                                <img src="assets/images/users/avatar-2.jpg" class="avatar-sm rounded-circle img-fluid single-chat-img" alt="">
                                 <div class="ms-3">
                                     <h5 class="mb-0 single-chat-title">Denny Silva</h5>
                                 </div>
@@ -1070,8 +864,7 @@
                         <div class="col-md-7">
                             <div class="d-flex flex-wrap gap-3 justify-content-sm-end align-items-center mt-4 mt-md-0">
                                 <div>
-                                    <a href="apps-chat.html#" class="text-muted" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom" title="" data-bs-original-title="voice call">
+                                    <a href="#" class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="voice call">
                                         <div class="avatar-sm">
                                             <span class="avatar-title bg-light rounded-circle text-muted">
                                                 <i class="mdi mdi-phone"></i>
@@ -1080,17 +873,16 @@
                                     </a>
                                 </div>
                                 <div class="dropdown avatar-sm">
-                                    <a class=" dropdown-toggle" href="apps-chat.html#" role="button" id="dropdownMenuLink"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                         <span class="avatar-title rounded-circle bg-light text-muted">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </span>
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li class="chat-list"><a class="dropdown-item" href="apps-chat.html#">Action</a></li>
-                                        <li class="chat-list"><a class="dropdown-item" href="apps-chat.html#">Another action</a></li>
-                                        <li class="chat-list"><a class="dropdown-item" href="apps-chat.html#">Something else here</a></li>
+                                        <li class="chat-list"><a class="dropdown-item" href="#">Action</a></li>
+                                        <li class="chat-list"><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li class="chat-list"><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1099,7 +891,7 @@
                 </div>
 
                 <div>
-                    <div class="chat-conversation py-3" data-simplebar style="max-height: 606px;" id="single-chat-conversation">
+                    <div class="chat-conversation py-3" data-simplebar="init" style="max-height: 606px;" id="single-chat-conversation"><div class="simplebar-wrapper" style="margin: -16px 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 16px 0px;">
                         <ul class="list-unstyled mb-0 px-3 single-chat-list" id="single-chat-list">
                             <li class="chat-list">
                                 <div class="chat-day-title mt-2">
@@ -1110,8 +902,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -1119,28 +910,16 @@
                                                     <p class="mb-0"> Hey.. Good morning </p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1156,8 +935,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1166,28 +944,16 @@
                                                         our next meeting?</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash    -can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash    -can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1203,37 +969,25 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">                       
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
                                                 <div class="ctext-wrap">
-                                                    <p class="mb-0">Yeah.. I'm fine & Next meeting tomorrow
+                                                    <p class="mb-0">Yeah.. I'm fine &amp; Next meeting tomorrow
                                                         10.00AM</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1249,8 +1003,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1258,34 +1011,21 @@
                                                     <p class="mb-0">Okay.. Thank you !</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Jansh Wells <small
-                                                    class="chat-time text-muted fw-medium">10:09
+                                                Jansh Wells <small class="chat-time text-muted fw-medium">10:09
                                                     am</small>
                                             </div>
                                         </div>
@@ -1296,15 +1036,13 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
                                                 <div class="ctext-wrap">
                                                     <p class="mb-1">Yeah..</p>
-                                                    <ul
-                                                        class="d-flex flex-wrap gap-2 list-inline message-img mb-0">
+                                                    <ul class="d-flex flex-wrap gap-2 list-inline message-img mb-0">
                                                         <li class="list-inline-item message-img-list me-0">
                                                             <div>
                                                                 <a href="assets/images/small/img-1.png" class="thumb preview-thumb image-popup">
@@ -1322,27 +1060,20 @@
                                                     </ul>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);">
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                             <i class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);">
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                             <i class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);">
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                             <i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);">
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);">
                                                             <i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);">
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);">
                                                             <i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
@@ -1358,8 +1089,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex">
@@ -1380,37 +1110,22 @@
                                                                 </div>
                                                             </div>
                                                             <div class="ms-5">
-                                                                <a href="apps-chat.html#" data-bs-toggle="tooltip"
-                                                                    data-bs-placement="top"
-                                                                    title="Download"><i
-                                                                        class="mdi mdi-download text-muted fs-5"></i></a>
+                                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="mdi mdi-download text-muted fs-5"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1431,8 +1146,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1440,34 +1154,21 @@
                                                     <p class="mb-0">Hello.. good morning</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Jansh Wells <small
-                                                    class="chat-time text-muted fw-medium">10:17
+                                                Jansh Wells <small class="chat-time text-muted fw-medium">10:17
                                                     am</small>
                                             </div>
                                         </div>
@@ -1478,8 +1179,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1501,43 +1201,27 @@
                                                                 </div>
                                                             </div>
                                                             <div class="ms-5">
-                                                                <a href="apps-chat.html#" data-bs-toggle="tooltip"
-                                                                    data-bs-placement="top"
-                                                                    title="Download"><i
-                                                                        class="mdi mdi-download text-muted fs-5"></i></a>
+                                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Download"><i class="mdi mdi-download text-muted fs-5"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Jansh Wells <small
-                                                    class="chat-time text-muted fw-medium">10:25
+                                                Jansh Wells <small class="chat-time text-muted fw-medium">10:25
                                                     am</small>
                                             </div>
                                         </div>
@@ -1548,8 +1232,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-2.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-2.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div>
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1557,34 +1240,21 @@
                                                     <p class="mb-0">Very good morning</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Denny Silva <small
-                                                    class="chat-time text-muted fw-medium">11:38
+                                                Denny Silva <small class="chat-time text-muted fw-medium">11:38
                                                     am</small>
                                             </div>
                                         </div>
@@ -1595,8 +1265,7 @@
                                 <div class="conversation-list">
                                     <div class="d-flex">
                                         <div class="chat-user">
-                                            <img src="assets/images/users/avatar-10.jpg"
-                                                class="avatar-sm img-fluid rounded-circle" alt="">
+                                            <img src="assets/images/users/avatar-10.jpg" class="avatar-sm img-fluid rounded-circle" alt="">
                                         </div><!-- end chat-user -->
                                         <div class="flex-1 chat-arrow">
                                             <div class="d-flex justify-content-end">
@@ -1604,34 +1273,21 @@
                                                     <p class="mb-0">How are you dear?</p>
                                                 </div>
                                                 <div class="dropdown align-self-end">
-                                                    <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </a>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-content-copy me-2"></i>Copy</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-star-outline me-2"></i>Star</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
-                                                        <a class="dropdown-item fw-medium text-muted"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-share-all-outline me-2"></i>Forward</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-content-copy me-2"></i>Copy</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-star-outline me-2"></i>Star</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-reply-all-outline me-2"></i>Reply</a>
+                                                        <a class="dropdown-item fw-medium text-muted" href="javascript: void(0);"><i class="mdi mdi-share-all-outline me-2"></i>Forward</a>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item"
-                                                            href="javascript: void(0);"><i
-                                                                class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
+                                                        <a class="dropdown-item fw-medium text-danger delete-chat-item" href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Delete</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="conversation-name fw-medium text-primary mb-2 mt-1">
-                                                Jansh Wells <small
-                                                    class="chat-time text-muted fw-medium">02:23
+                                                Jansh Wells <small class="chat-time text-muted fw-medium">02:23
                                                     pm</small>
                                             </div>
                                         </div>
@@ -1639,15 +1295,13 @@
                                 </div>
                             </li><!-- end li -->
                         </ul><!-- end ul -->
-                    </div>
+                    </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div></div>
                     <div class="p-3 chat-input-section">
                         <form class="chatinput-form" data-id="single-chat-list">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="apps-chat.html#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="bx bx-plus fs-3"></i>
                                         </a>
                                         <div class="dropdown-menu">
@@ -1667,12 +1321,14 @@
                                 <!-- end col -->
                                 <div class="col">
                                     <div class="position-relative">
-                                        <input type="text" class="form-control chat-input task-comment" id="single-chat-input"
-                                            placeholder="Type your message here...">
+                                        <input type="text" class="form-control chat-input task-comment" id="single-chat-input" placeholder="Type your message here...">
                                         <div class="chat-input-links" id="tooltipContainer">
                                             <ul class="list-inline mb-0">
-                                                <li class="list-inline-item"><a href="javascript: void(0);" title="Emoji">
-                                                    <i class="mdi mdi-emoticon-happy-outline"></i></a></li>
+                                                <li class="list-inline-item">
+                                                    <a href="javascript: void(0);" title="Emoji">
+                                                        <i class="mdi mdi-emoticon-happy-outline"></i>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1681,8 +1337,9 @@
                                 <div class="col-auto">
                                     <div class="d-flex gap-3">
                                         <i class="mdi mdi-microphone fs-3 text-muted align-middle"></i>
-                                        <button type="submit" class="btn btn-primary btn-rounded shadow-none chat-send">
-                                            <i class="mdi mdi-send send-task-comment"></i></button>
+                                        <a href="javascript:void(0);" class="btn btn-primary btn-rounded shadow-none chat-send">
+                                            <i class="mdi mdi-send send-task-comment"></i>
+                                        </a>
                                     </div>
                                 </div><!-- end col -->
                             </div><!-- end row -->
@@ -1691,7 +1348,8 @@
                 </div>
             </div>
         </div>
-    </div><!-- end row -->
+    </div>
+
 </div><!-- container-fluid -->
        
 

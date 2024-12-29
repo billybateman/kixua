@@ -68,7 +68,7 @@ final class Header
      * Example headers include 'accept', 'cache-control' and 'if-none-match'.
      *
      * This method must not be used to parse headers that are not defined as
-     * a list, such as 'user-agent' or 'set-cookie'.
+     * a list, such as 'users_agent' or 'set-cookie'.
      *
      * @param string|string[] $values Header value as returned by MessageInterface::getHeader()
      *

@@ -4,12 +4,12 @@ namespace Curl;
 
 class BrowserClient extends Client
 {
-    // HTTP headers that uniquely identify this browser such as User-Agent
+    // HTTP headers that uniquely identify this browser such as users_Agent
     protected $headers = array(
         'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Encoding' => 'gzip, deflate',
         'Accept-Language' => 'en-US,en;q=0.5',
-        'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0'
+        'users_Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0'
     );
 
     protected $options = array(

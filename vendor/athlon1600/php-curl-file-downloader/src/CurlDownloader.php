@@ -82,7 +82,7 @@ class CurlDownloader
                 }
             }
 
-            $save_to = call_user_func($destination, $filename);
+            $save_to = call_users_func($destination, $filename);
 
             rename($temp_filename, $save_to);
         }
